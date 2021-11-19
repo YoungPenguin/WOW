@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+.bk-logo-small, .bk-tool-icon-pan, .bk-tool-icon-wheel-zoom, .bk-divider, .bk-tool-icon-save, .bk-tool-icon-hover{
+  display: none !important;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
+}
+
+.bk{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1030px;
+  min-height: 100%;
+  padding: 0 1.5rem;
+}
