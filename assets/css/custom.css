@@ -1,0 +1,15 @@
+.center {
+  padding: 0;
+  margin: auto;
+  display: block;
+  max-width: 800px !important;
+} 
+  .bk{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .bk-logo-small, .bk-tool-icon-pan, .bk-tool-icon-wheel-zoom, .bk-divider, .bk-tool-icon-save, .bk-tool-icon-hover{
+    display: none !important;
+  }
+  
