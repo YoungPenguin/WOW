@@ -6,9 +6,6 @@
 html {
   scroll-behavior: smooth;
 }
-.bk-logo-small, .bk-tool-icon-pan, .bk-tool-icon-wheel-zoom, .bk-divider, .bk-tool-icon-save, .bk-tool-icon-hover{
-  display: none !important;
-}
 
 body{
   min-height: 100vh;
@@ -25,9 +22,13 @@ footer{
   margin-right: auto !important;
 }
 
+.bk-logo-small, .bk-tool-icon-pan, .bk-tool-icon-wheel-zoom, .bk-divider, .bk-tool-icon-save, .bk-tool-icon-hover{
+  display: none !important;
+}
+
 .container {
   margin-top:5rem;
-  max-width: 1030px;
+  max-width: 90vw;
   min-height: 100%;
   padding: 0 1.5rem;
 }
