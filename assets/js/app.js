@@ -149,7 +149,7 @@ function updateWcSelection(){
   var html_horde_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_horde.png" title="Title 2"><img src="assets/images/wowhead/wc_horde.png" alt="Gallery Image 2">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Title 2"><img src="assets/images/wowhead/wc_Horde.png" alt="Gallery Image 2">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -159,7 +159,7 @@ function updateWcSelection(){
   var html_horde_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_horde.png" title="Title 4"><img src="assets/images/wowpedia/wc_horde.png" alt="Gallery Image 4">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Title 4"><img src="assets/images/wowpedia/wc_Horde.png" alt="Gallery Image 4">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
