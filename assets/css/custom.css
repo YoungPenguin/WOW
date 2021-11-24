@@ -7,6 +7,10 @@
   url("font/1dd8d81c8ec73dac8887c1243a771e56.svg#LifeCraftRegular") format("svg"); /* iOS 4.1- */
 }
 
+.center-text{
+  text-align: center;
+}
+
 .wow_font{
   font-family:"LifeCraftRegular" !important;
   font-style:normal;
