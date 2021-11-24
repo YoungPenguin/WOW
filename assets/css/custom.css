@@ -6,7 +6,9 @@
   url("font/1dd8d81c8ec73dac8887c1243a771e56.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("font/1dd8d81c8ec73dac8887c1243a771e56.svg#LifeCraftRegular") format("svg"); /* iOS 4.1- */
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .center-text{
   text-align: center;
 }
