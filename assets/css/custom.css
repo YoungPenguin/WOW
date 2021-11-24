@@ -12,6 +12,9 @@ html {
 .center-text{
   text-align: center;
 }
+.nav-link {
+  cursor: pointer;
+}
 
 .wow_font{
   font-family:"LifeCraftRegular" !important;

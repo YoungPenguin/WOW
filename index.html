@@ -43,16 +43,16 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">          
               <li class="nav-item active">
-                <a class="nav-link" href="#partA">Intro<span class="sr-only">(current)</span></a>
+                <a class="nav-link" onclick="customScroll('demos', -10)">Intro<span class="sr-only">(current)</span></a>
               </li>
               <li class="dropdown"><a class="dropdown-toggle" href="#Analysis" data-toggle="dropdown">ANALYSIS</a>
                 <ul class="dropdown-menu leftauto">
-                  <li><a href="#WC_section">Word Cloud</a></li>
-                  <li><a href="#Moreplots">More plots</a></li>
+                  <li><a onclick="customScroll('WC_section', -50)">Word Cloud</a></li>
+                  <li><a onclick="customScroll('Moreplots', -50)">More plots</a></li>
                  </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#ElplainerNotebook">Data and Notebook</a>
+                <a class="nav-link"  onclick="customScroll('ElplainerNotebook', -100)">Data and Notebook</a>
               </li>
             </ul>
           </div>
@@ -60,14 +60,14 @@
       </nav>
       <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/wow.jpg">
         <div class="titan-caption">
-          <div class="caption-content" id="ElplainerNotebook">
+          <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1 wow_font">World of Warcraft</div>
             <div class="font-alt mb-40 titan-title-size-4 font-weight-bold wow_font">Analysis of wowpedia and wowhead</div>
           </div>
         </div>
       </section>
       <div class="main showcase-page">
-        <section  id="partA" class="module-extra-small bg-dark">
+        <section id="ElplainerNotebook" class="module-extra-small bg-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-md-8 col-lg-9">

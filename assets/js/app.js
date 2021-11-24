@@ -10,6 +10,15 @@ function removeAllChildNodes(parent) {
 }
 
 
+function customScroll(inputid, offset){
+const id = inputid;
+const yOffset = offset; 
+const element = document.getElementById(id);
+const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+window.scrollTo({top: y, behavior: 'smooth'});
+}
+
 function updateWcSelection(){
   const container = document.querySelector('#wc_container');
   removeAllChildNodes(container);
