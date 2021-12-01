@@ -26,12 +26,12 @@ const labelToRGB = {
     'Neutral': ['rgb(160, 160, 160)', 'rgba(160, 160, 160, 0.2)'],
     'Male': ['rgb(51, 153, 255)', 'rgba(51, 153, 255, 0.2)'],
     'Female': ['rgb(212, 74, 204)', 'rgba(212, 74, 204, 0.2)'],
-    "Khadgar, Illidan, Lor'themar": ['#62704d', 'rgba(128, 128, 0, 0.2)'],
-    "Deathwing, Sargeras, Yogg-Saron": ['#53868b', 'rgba(255, 69, 0, 0.2)'],
-    "Sylvanas, Lich King, Varian Wrynn": ['#8e635e', 'rgba(199, 21, 133, 0.2)'],
-    "Tyrande, Malfurion, Alexstrasza": ['#f5a791', 'rgba(0, 255, 0, 0.2)'],
-    "Thrall, Ner'zhul, Orgrim": ['#8c7549', 'rgba(0, 255, 255, 0.2)'],
-    "Anzu, Terokk, Talon King Ikiss": ['#b3c598', 'rgba(0, 0, 255, 0.2)'],
-    "Jaina Proudmoore, Anduin Wrynn, Garrosh": ['#432f20', 'rgba(30, 144, 255, 0.2)']
+    "Khadgar, Illidan, Lor'themar": ['#62704d', '--'],
+    "Deathwing, Sargeras, Yogg-Saron": ['#53868b', '--'],
+    "Sylvanas, Lich King, Varian Wrynn": ['#8e635e', '--'],
+    "Tyrande, Malfurion, Alexstrasza": ['#f5a791', '--'],
+    "Thrall, Ner'zhul, Orgrim": ['#8c7549', '--'],
+    "Anzu, Terokk, Talon King Ikiss": ['#b3c598', '--'],
+    "Jaina Proudmoore, Anduin Wrynn, Garrosh": ['#432f20', '--']
 }
 
