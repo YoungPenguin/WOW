@@ -64,9 +64,8 @@ function plotDist() {
                 title: 'Density'
             },
             grid: { rows: 1, columns: 2, pattern: 'independent' }
-        },
-        {
-            repsonsive: true
+        },{
+            responsive: true
         }
     )
 }
