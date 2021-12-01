@@ -1,122 +1,138 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--  
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  
     Document Title
     =============================================
     -->
-    <title>WoW</title>
-    <!-- Default stylesheets-->
-    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template specific stylesheets-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+  <title>WoW</title>
+  <!-- Default stylesheets-->
+  <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Template specific stylesheets-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
+  <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+  <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
 
-    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <!-- Main stylesheet and color file-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-    <!-- plootting network-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.1.min.js"></script>
-    <script type="text/javascript">Bokeh.set_log_level("info");</script>
-  </head>
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
+  <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+  <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+  <!-- Main stylesheet and color file-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+  <!-- plootting network-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.1.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+
+  <script type="text/javascript">Bokeh.set_log_level("info");</script>
+</head>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <main>
+    <div class="page-loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span
+              class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span
+              class="icon-bar"></span></button><a class="navbar-brand" href="index.html">W</a>
+        </div>
+        <div class="collapse navbar-collapse" id="custom-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active">
+              <a class="nav-link" onclick="customScroll('demos', -10)">Intro<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" href="#Analysis" data-toggle="dropdown">ANALYSIS</a>
+              <ul class="dropdown-menu leftauto">
+                <li><a onclick="customScroll('WC_section', -50)">Word Cloud</a></li>
+                <li><a onclick="customScroll('Moreplots', -50)">More plots</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="customScroll('ElplainerNotebook', -100)">Data and Notebook</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">W</a>
-          </div>
-          <div class="collapse navbar-collapse" id="custom-collapse">
-            <ul class="nav navbar-nav navbar-right">          
-              <li class="nav-item active">
-                <a class="nav-link" onclick="customScroll('demos', -10)">Intro<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#Analysis" data-toggle="dropdown">ANALYSIS</a>
-                <ul class="dropdown-menu leftauto">
-                  <li><a onclick="customScroll('WC_section', -50)">Word Cloud</a></li>
-                  <li><a onclick="customScroll('Moreplots', -50)">More plots</a></li>
-                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  onclick="customScroll('ElplainerNotebook', -100)">Data and Notebook</a>
-              </li>
-            </ul>
+    </nav>
+    <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/wow.jpg">
+      <div class="titan-caption">
+        <div class="caption-content">
+          <div class="font-alt mb-30 titan-title-size-1 wow_font">World of Warcraft</div>
+          <div class="font-alt mb-40 titan-title-size-4 font-weight-bold wow_font">Analysis of wowpedia and wowhead
           </div>
         </div>
-      </nav>
-      <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="assets/images/wow.jpg">
-        <div class="titan-caption">
-          <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1 wow_font">World of Warcraft</div>
-            <div class="font-alt mb-40 titan-title-size-4 font-weight-bold wow_font">Analysis of wowpedia and wowhead</div>
+      </div>
+    </section>
+    <div class="main showcase-page">
+      <section id="ElplainerNotebook" class="module-extra-small bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 col-lg-9">
+              <div class="callout-text font-alt">
+                <h4 style="margin-top: 0px; font-;">WOW CAN IT BE BETTER?</h4>
+                <p style="margin-bottom: 0px;">Start your journey today</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="callout-btn-box"><a class="btn btn-border-w btn-circle"
+                  onclick="Download('assets/data/Aethas_Sunreaver.zip')">Downlaod data</a></div>
+            </div>
           </div>
         </div>
       </section>
-      <div class="main showcase-page">
-        <section id="ElplainerNotebook" class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px; font-;">WOW CAN IT BE BETTER?</h4>
-                  <p style="margin-bottom: 0px;">Start your journey today</p>
+      <section class="module-medium" id="demos">
+        <div class="container">
+          <div class="row multi-columns-row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+
+              <div class="text-center p-3">
+                <p>Analysis of the <a href="https://wowpedia.fandom.com/wiki/Major_characters">Major characters in
+                    Warcraft</a>, by examining their character pages on <a
+                    href="https://wowpedia.fandom.com/wiki/Wowpedia">wowpedia</a> and analysing the user comments on
+                  their <a href="https://www.wowhead.com">wowhead</a> threads.</p>
+                <div class="entry-content">
+                  <p>&#9642; An explanation of the central idea behind your final project (what is the idea?, why is it
+                    interesting? which datasets did you need to explore the idea?, how did you download them)</p>
+                  <p>&#9642; An outline on the elements you'll need to get to your goal &#38; the implementation plan..
+                  </p>
+                  <p>&#9642; A walk-through of your preliminary data-analysis, addressing</p>
+                  <p>&#9642; What is the total size of your data? (MB, number of pages, other variables, etc.)</p>
+                  <p>&#9642; What is the network you will be analyzing? (number of nodes? number of links?, degree
+                    distributions, what are node attributes?, etc.)</p>
                 </div>
+
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="callout-btn-box"><a class="btn btn-border-w btn-circle" onclick="Download('assets/data/Aethas_Sunreaver.zip')">Downlaod data</a></div>
-              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <p>hover over the graph - use scroll to zoom</p>
+              <div class="bk-root" id="b7bb9578-c4df-4626-8bcc-d75b0a9633be" data-root-id="4427"></div>
             </div>
           </div>
-        </section>
-        <section class="module-medium" id="demos">
-            <div class="container" >
-              <div class="row multi-columns-row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    
-                      <div class="text-center p-3">
-                      <p>Analysis of the <a href="https://wowpedia.fandom.com/wiki/Major_characters">Major characters in Warcraft</a>, by examining their character pages on <a href="https://wowpedia.fandom.com/wiki/Wowpedia">wowpedia</a> and analysing the user comments on their <a href="https://www.wowhead.com">wowhead</a> threads.</p>
-                      <div class="entry-content">
-                        <p>&#9642; An explanation of the central idea behind your final project (what is the idea?, why is it interesting? which datasets did you need to explore the idea?, how did you download them)</p>
-                        <p>&#9642; An outline on the elements you'll need to get to your goal &#38; the implementation plan..</p>
-                        <p>&#9642; A walk-through of your preliminary data-analysis, addressing</p> <p>&#9642; What is the total size of your data? (MB, number of pages, other variables, etc.)</p> <p>&#9642; What is the network you will be analyzing? (number of nodes? number of links?, degree distributions, what are node attributes?, etc.)</p> 
-                      </div>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                        <p>hover over the graph - use scroll to zoom</p>
-                        <div class="bk-root" id="b7bb9578-c4df-4626-8bcc-d75b0a9633be" data-root-id="4427"></div>
-                </div>
-              </div>
-            </div>
-            <div class="center">
-                <p>
-                <button id="Out-Degree">Out Degree</button>
-                <button id="In-Degree">In Degree</button>
-                <button id="corr">corr</button>
-                </p>
+        </div>
+        <div class="center">
+          <p>
+            <button id="Out-Degree">Out Degree</button>
+            <button id="In-Degree">In Degree</button>
+            <button id="corr">corr</button>
+          </p>
           <canvas id="InOutDeg"></canvas>
         </div>
-        </section>
+      </section>
 
       <section id="Analysis" class="module">
         <div class="container" id="WC_section">
           <h1 class="center-text">WC SECTION</h1>
-          <div class="center-text"> 
+          <div class="center-text">
             <select id="WC_dropdown_1" onChange="updateWcSelection()">
               <option value="1" selected="selected">Alliance</option>
               <option value="2">Horde</option>
@@ -130,101 +146,144 @@
               <option value="4">Female</option>
             </select> from
             <select id="WC_wow" onChange="updateWcSelection()">
-              <option value="1" >WowPedia</option>
+              <option value="1">WowPedia</option>
               <option value="2">WowHead</option>
               <option value="3" selected="selected">WowPedia &amp; WowHead</option>
             </select>
           </div>
-            <div id="wc_container" class="row multi-columns-row">
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="gallery-item">
-                  <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png" title="Title 1"><img src="assets/images/wowhead/wc_Alliance.png" alt="Gallery Image 1">
-                      <div class="gallery-caption">
-                        <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                      </div></a></div>
-                </div>
+          <div id="wc_container" class="row multi-columns-row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="gallery-item">
+                <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png"
+                    title="Title 1"><img src="assets/images/wowhead/wc_Alliance.png" alt="Gallery Image 1">
+                    <div class="gallery-caption">
+                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+                    </div>
+                  </a></div>
               </div>
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="gallery-item">
-                  <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Title 2"><img src="assets/images/wowhead/wc_Horde.png" alt="Gallery Image 2">
-                      <div class="gallery-caption">
-                        <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                      </div></a></div>
-                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="gallery-item">
+                <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png"
+                    title="Title 2"><img src="assets/images/wowhead/wc_Horde.png" alt="Gallery Image 2">
+                    <div class="gallery-caption">
+                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+                    </div>
+                  </a></div>
               </div>
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="gallery-item">
-                  <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png" title="Title 3"><img src="assets/images/wowpedia/wc_Alliance.png" alt="Gallery Image 3">
-                      <div class="gallery-caption">
-                        <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                      </div></a></div>
-                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="gallery-item">
+                <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png"
+                    title="Title 3"><img src="assets/images/wowpedia/wc_Alliance.png" alt="Gallery Image 3">
+                    <div class="gallery-caption">
+                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+                    </div>
+                  </a></div>
               </div>
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="gallery-item">
-                  <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Title 4"><img src="assets/images/wowpedia/wc_Horde.png" alt="Gallery Image 4">
-                      <div class="gallery-caption">
-                        <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                      </div></a></div>
-                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="gallery-item">
+                <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png"
+                    title="Title 4"><img src="assets/images/wowpedia/wc_Horde.png" alt="Gallery Image 4">
+                    <div class="gallery-caption">
+                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+                    </div>
+                  </a></div>
               </div>
             </div>
           </div>
+        </div>
       </section>
-        
+
       <section id="Moreplots">
         <div class="container">
           <h1 class="center-text">More plots here</h1>
-                <p>
-                <button id="gender">gender</button>
-                <button id="fraction">faction</button>
-                <button id="status">status</button>
-                <button id="race">race</button>
-                </p>
-       <canvas id="canvas"></canvas>
+          <p>
+            <button id="gender">gender</button>
+            <button id="fraction">faction</button>
+            <button id="status">status</button>
+            <button id="race">race</button>
+          </p>
+          <canvas id="canvas"></canvas>
         </div>
-      
+      </section>
+
+      <br><br>
+      <section id="CommentsTs">
+        <div class="center-text">
+          <p>
+            Blah blah something explaining comments and timeseries and blah blah lorem ipsum
+          </p>
+
+          <select id="ts_metric" onChange="plotTs()">
+            <option value="bert_sentiment">Bert sentiment</option>
+            <option value="vader_sentiment">Vader sentiment</option>
+            <option value="rating">Comment rating</option>
+          </select>
+          <select id="ts_breakdown" onChange="plotTs()">
+            <option value="faction" selected>Faction</option>
+            <option value="gender">Gender</option>
+            <option value="status">Status</option>
+            <option value="community">Community</option>
+          </select>
+          <select id="ts_resample" onChange="plotTs()">
+            <option value="M">M</option>
+            <option value="Q">Q</option>
+            <option value="Y" selected>Y</option>
+          </select>
+          <select id="ts_replies" onChange="plotTs()">
+            <option value="include">Include</option>
+            <option value="ignore">Ignore</option>
+          </select>
+        </div>
+        <div style="margin-left: auto; margin-right: auto; width: 80vw;" id="tsPlotElement"></div>
+        <script src="assets/data/commentData.js"></script>
+        <script src="assets/js/tsComments.js"></script>
       </section>
 
 
-        <section class="module-extra-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-9">
-                <div class="callout-text font-alt">
-                  <h4 style="margin-top: 0px;">noCopyright</h4>
-                  <p style="margin-bottom: 0px;">Fuck off nerd</p>
-                </div>
+
+
+      <section class="module-extra-small bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 col-lg-9">
+              <div class="callout-text font-alt">
+                <h4 style="margin-top: 0px;">noCopyright</h4>
+                <p style="margin-bottom: 0px;">Fuck off nerd</p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </div>
 
 
-      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
-    </main>
-    <!--  
+    <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+  </main>
+  <!--  
     JavaScripts
     =============================================
     -->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/lib/wow/dist/wow.js"></script>
-    <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="assets/lib/smoothscroll.js"></script>
-    <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/in_deg-out_deg.js"></script>
-    <script src="assets/js/dis.js"></script>
-    <link href="assets/css/custom.css" rel="stylesheet">
-  </body>
+  <script src="assets/lib/jquery/dist/jquery.js"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/lib/wow/dist/wow.js"></script>
+  <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+  <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+  <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+  <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
+  <script src="assets/lib/smoothscroll.js"></script>
+  <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+  <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/in_deg-out_deg.js"></script>
+  <script src="assets/js/dis.js"></script>
+  <link href="assets/css/custom.css" rel="stylesheet">
+</body>
+
 </html>
 
 
