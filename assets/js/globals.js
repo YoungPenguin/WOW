@@ -15,10 +15,12 @@
 //     "Jaina Proudmoore, Anduin Wrynn, Garrosh": '#1e90ff'
 // }
 
+const shortCommunityName = (s) => s.replace(' Stormrage', '').replace(' Windrunner', '').replace(' Theron', '').replace(' Whisperwind', '').replace(' Doomhammer', '').replace(' Hellscream', '').replace(' Wrynn', '').replace(' Proudmoore', '')
+
 const labelToRGB = {
     'Alive': ['rgb(34, 139, 34)', 'rgba(34, 139, 34, 0.2)'],
     'Deceased': ['rgb(52, 52, 52)', 'rgba(52, 52, 52, 0.2)'],
-    'Unknown': ['rgb(160, 160, 160)', 'rgba(160, 160, 160, 0.2)'], 
+    'Unknown': ['rgb(160, 160, 160)', 'rgba(160, 160, 160, 0.2)'],
     'Alliance': ['rgb(51, 153, 255)', 'rgba(51, 153, 255, 0.2)'],
     'Horde': ['rgb(255, 51, 51)', 'rgba(255, 51, 51, 0.2)'],
     'Neutral': ['rgb(160, 160, 160)', 'rgba(160, 160, 160, 0.2)'],

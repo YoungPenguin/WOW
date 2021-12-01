@@ -6,7 +6,7 @@ function plotDist() {
     const commentLines = commentDistData.filter(d => d.breakdown == params.breakdown && d.metric == params.metric)
     const commentsPlotData = commentLines.map(l => {
         const line = { width: 4 }
-        const label = l.label.replace(' Stormrage', '').replace(' Windrunner', '').replace(' Theron', '').replace(' Whisperwind', '').replace(' Doomhammer', '').replace(' Hellscream', '')
+        const label = shortCommunityName(l.label)
         if (labelToRGB[label]) {
             line.color = labelToRGB[label][0]
         }
@@ -26,7 +26,7 @@ function plotDist() {
     const wikiLines = wikiDistData.filter(d => d.breakdown == params.breakdown && d.metric == params.metric)
     const wikiPlotData = wikiLines.map(l => {
         const line = { width: 4 }
-        const label = l.label.replace(' Stormrage', '').replace(' Windrunner', '').replace(' Theron', '').replace(' Whisperwind', '').replace(' Doomhammer', '').replace(' Hellscream', '')
+        const label = shortCommunityName(l.label)
         if (labelToRGB[label]) {
             line.color = labelToRGB[label][0]
         }
@@ -64,9 +64,9 @@ function plotDist() {
                 title: 'Density'
             },
             grid: { rows: 1, columns: 2, pattern: 'independent' }
-        },{
-            responsive: true
-        }
+        }, {
+        responsive: true
+    }
     )
 }
 plotDist()
