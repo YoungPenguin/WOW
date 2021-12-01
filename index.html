@@ -32,6 +32,7 @@
   <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
 
   <script type="text/javascript">Bokeh.set_log_level("info");</script>
+  <script type="text/javascript" src="assets/js/globals.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -134,12 +135,14 @@
         <div class="container" id="WC_section">
           <h1 class="center-text">Word Clouds</h1>
           <p>
-              word clouds are made based on TF-IDF values computed for blabla. <br>
-              By using the dropdown menus, one can easily compare how wordclouds for characters with specific attributes differ, <br>
-              but also the difference between wordclouds based on wowpedia character pages and on comments taken from their wowhead threads.
+            word clouds are made based on TF-IDF values computed for blabla. <br>
+            By using the dropdown menus, one can easily compare how wordclouds for characters with specific attributes
+            differ, <br>
+            but also the difference between wordclouds based on wowpedia character pages and on comments taken from
+            their wowhead threads.
           </p>
           <div class="center-text">
-            Compare: 
+            Compare:
             <select id="WC_dropdown_1" onChange="updateWcSelection()">
               <option value="1" selected="selected">Alliance</option>
               <option value="2">Horde</option>
@@ -206,7 +209,7 @@
       <section id="Moreplots">
         <div class="container">
           <h1 class="center-text">More Network Analysis</h1>
-          <p> Pick attribute:  
+          <p> Pick attribute:
             <button id="gender">Gender</button>
             <button id="fraction">Faction</button>
             <button id="status">Status</button>
@@ -219,7 +222,7 @@
       <br><br>
       <section id="CommentsTs">
         <div class="center-text">
-        <h1 class="center-text">Sentiment Analysis</h1>
+          <h1 class="center-text">Sentiment Analysis</h1>
           <p>
             Blah blah something explaining comments and timeseries and blah blah lorem ipsum
           </p>
