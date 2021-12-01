@@ -53,7 +53,7 @@ var chr = document.getElementById("canvas");
           barchr.data = {
                     labels: fraction_labels,
                     datasets: [{
-                        label: "Fraction",
+                        label: "Faction",
                         data: [ 41,  41, 179],
                     }],
                 }
@@ -64,7 +64,7 @@ var chr = document.getElementById("canvas");
             barchr.config.data = {
                       labels: status_lables,
                       datasets: [{
-                        label: "status",
+                        label: "Status",
                           data: [150, 107,   4],
           
                       }],
