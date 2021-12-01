@@ -53,8 +53,9 @@
             </li>
             <li class="dropdown"><a class="dropdown-toggle" href="#Analysis" data-toggle="dropdown">ANALYSIS</a>
               <ul class="dropdown-menu leftauto">
-                <li><a onclick="customScroll('WC_section', -50)">Word Cloud</a></li>
-                <li><a onclick="customScroll('Moreplots', -50)">More plots</a></li>
+                <li><a onclick="customScroll('WC_section', -50)">Word Clouds</a></li>
+                <li><a onclick="customScroll('Moreplots', -50)">More Network Analysis</a></li>
+                <li><a onclick="customScroll('CommentsTs', -50)">Sentiment Analysis</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -131,14 +132,20 @@
 
       <section id="Analysis" class="module">
         <div class="container" id="WC_section">
-          <h1 class="center-text">WC SECTION</h1>
+          <h1 class="center-text">Word Clouds</h1>
+          <p>
+              word clouds are made based on TF-IDF values computed for blabla. <br>
+              By using the dropdown menus, one can easily compare how wordclouds for characters with specific attributes differ, <br>
+              but also the difference between wordclouds based on wowpedia character pages and on comments taken from their wowhead threads.
+          </p>
           <div class="center-text">
+            Compare: 
             <select id="WC_dropdown_1" onChange="updateWcSelection()">
               <option value="1" selected="selected">Alliance</option>
               <option value="2">Horde</option>
               <option value="3">Male</option>
               <option value="4">Female</option>
-            </select> V.
+            </select> vs.
             <select id="WC_dropdown_2" onChange="updateWcSelection()">
               <option value="1">Alliance</option>
               <option value="2" selected="selected">Horde</option>
@@ -198,12 +205,12 @@
 
       <section id="Moreplots">
         <div class="container">
-          <h1 class="center-text">More plots here</h1>
-          <p>
-            <button id="gender">gender</button>
-            <button id="fraction">faction</button>
-            <button id="status">status</button>
-            <button id="race">race</button>
+          <h1 class="center-text">More Network Analysis</h1>
+          <p> Pick attribute:  
+            <button id="gender">Gender</button>
+            <button id="fraction">Faction</button>
+            <button id="status">Status</button>
+            <button id="race">Race</button>
           </p>
           <canvas id="canvas"></canvas>
         </div>
@@ -212,6 +219,7 @@
       <br><br>
       <section id="CommentsTs">
         <div class="center-text">
+        <h1 class="center-text">Sentiment Analysis</h1>
           <p>
             Blah blah something explaining comments and timeseries and blah blah lorem ipsum
           </p>
