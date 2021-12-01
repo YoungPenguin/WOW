@@ -45,16 +45,14 @@ function updateWcSelection(){
   }
 }
 
-
-  
 (function() {
   var fn = function() {
     Bokeh.safely(function() {
       (function(root) {
         function embed_document(root) {
           
-        var docs_json = document.getElementById('2957').textContent;
-        var render_items = [{"docid":"bcf5e7cf-d0f7-48f2-b98a-b9c9f6d05378","root_ids":["2471"],"roots":{"2471":"c82e5c0b-cbca-49f1-aed5-1099ef419751"}}];
+        var docs_json = document.getElementById('4913').textContent;
+        var render_items = [{"docid":"21e80ba7-6f98-473e-b8cc-25c5207c739d","root_ids":["4427"],"roots":{"4427":"b7bb9578-c4df-4626-8bcc-d75b0a9633be"}}];
         root.Bokeh.embed.embed_items(docs_json, render_items);
       
         }
@@ -81,7 +79,6 @@ function updateWcSelection(){
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-
 
   function internalSwitch(select, dropdown2, dropdown1, container){
     if(select != "head"){
