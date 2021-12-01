@@ -11,8 +11,8 @@ function plotTs() {
     const plotData = lines.map(l => {
         const line = { width: 4 }
         const label = l.label.replace(' Stormrage', '').replace(' Windrunner', '').replace(' Theron', '').replace(' Whisperwind', '').replace(' Doomhammer', '').replace(' Hellscream', '')
-        if (labelToColor[label]) {
-            line.color = labelToColor[label]
+        if (labelToRGB[label]) {
+            line.color = labelToRGB[label][0]
         }
         return {
             mode: 'lines+markers',
