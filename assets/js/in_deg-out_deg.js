@@ -16,8 +16,6 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
                 3,  7,  6,  3,  3,  5,  8,  4,  5,  1,  1,  1,  4,  3,  2,  1,  1,
                 3,  3,  3,  1,  2,  2,  1,  1,  1,  1,  1,  1,  2,  1,  1],
             borderWidth: 1
-        },{
-            data:[ null,  null,  null,  null,  1,  1,  4,  6,  9, 18, 13, 26, 23, 28, 26, 26, 19, 15, 13, 11, 11, 4,  3,  3,  1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
         }]
     },
     options: {
