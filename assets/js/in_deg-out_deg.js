@@ -889,7 +889,6 @@ var data1 = [{
 
 
 document.getElementById("corr").addEventListener("click", function() {
-console.log("dssdds")
     lineChart.destroy();
     lineChart = new Chart(document.getElementById("InOutDeg"), {
         type: 'scatter',
