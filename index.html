@@ -238,9 +238,37 @@
           </select>
         </div>
         <div style="margin-left: auto; margin-right: auto; width: 80vw;" id="tsPlotElement"></div>
-        <script src="assets/data/commentData.js"></script>
+        <script src="assets/data/commentTsData.js"></script>
         <script src="assets/js/tsComments.js"></script>
       </section>
+
+
+
+      <section id="DistCommentsAndWiki">
+        <div class="center-text">
+          <p>
+            Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah
+            lorem ipsum
+          </p>
+
+          <select id="dist_metric" onChange="plotDist()">
+            <option value="bert_sentiment">Bert sentiment</option>
+            <option value="vader_sentiment">Vader sentiment</option>
+          </select>
+          <select id="dist_breakdown" onChange="plotDist()">
+            <option value="faction" selected>Faction</option>
+            <option value="gender">Gender</option>
+            <option value="status">Status</option>
+            <option value="community">Community</option>
+          </select>
+        </div>
+        <div id="distPlotElement"></div>
+
+        <script src="assets/data/commentDistData.js"></script>
+        <script src="assets/data/wikiDistData.js"></script>
+        <script src="assets/js/distCommentsAndWiki.js"></script>
+      </section>
+
 
 
 
