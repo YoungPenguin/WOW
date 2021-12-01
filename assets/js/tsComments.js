@@ -47,6 +47,9 @@ function plotTs() {
                 r: 20,
                 t: 100
             },
+        },
+        {
+            responsive: true
         }
     )
 }
