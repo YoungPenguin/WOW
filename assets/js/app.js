@@ -9,6 +9,10 @@ function removeAllChildNodes(parent) {
     }
 }
 
+function NewTab(url) {
+  window.open(
+    url, "_blank");
+}
 
 function customScroll(inputid, offset){
 const id = inputid;
