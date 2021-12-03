@@ -32,7 +32,23 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
                     return tooltipItem.yLabel;
                 }
             }
-        }
+        },
+        scales: {
+            xAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Degree'
+              }
+            }],
+            yAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Frequency'
+              }
+            }]
+          }
     }
 });
 
@@ -63,7 +79,23 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
                         return tooltipItem.yLabel;
                     }
                 }
-            }
+            },
+            scales: {
+                xAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Degree'
+                  }
+                }],
+                yAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Frequency'
+                  }
+                }]
+              }
         }
     });
 });
@@ -97,7 +129,23 @@ document.getElementById("In-Degree").addEventListener("click", function () {
                         return tooltipItem.yLabel;
                     }
                 }
-            }
+            },            
+            scales: {
+                xAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Degree'
+                  }
+                }],
+                yAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Frequency'
+                  }
+                }]
+              }
         }
     });
 });
@@ -1173,7 +1221,23 @@ document.getElementById("corr").addEventListener("click", function () {
                         return tooltipItem.yLabel;
                     }
                 }
-            }
+            },            
+            scales: {
+                xAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Outdegree'
+                  }
+                }],
+                yAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Indegree'
+                  }
+                }]
+              }
         }
     });
 });
