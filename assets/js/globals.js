@@ -38,4 +38,4 @@ const labelToRGB = {
 
 
 const singleChartColor = ['rgb(149, 125, 173)', 'rgba(149, 125, 173, 0.3)', 'rgba(149, 125, 173, 0.6)']
-
+const singleChartColor_2 = ['rgb(0, 138, 216)', 'rgba(0, 138, 216, 0.3)', 'rgba(0, 138, 216, 0.6)']
