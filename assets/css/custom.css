@@ -140,3 +140,8 @@ p {
   font-weight: 800;
   margin-bottom: 0;
 }
+
+table {
+  margin-bottom: 5px !important;
+  margin-top: 5px !important;
+}
