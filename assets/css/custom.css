@@ -141,6 +141,12 @@ p {
   margin-bottom: 0;
 }
 
+
+table {
+  margin-bottom: 5px !important;
+  margin-top: 5px !important;
+}
+
 .network-visual {
   margin-left: 30px;
   margin-right: 30px;
