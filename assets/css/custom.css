@@ -16,8 +16,11 @@
 
 * {
   font-size: 1.5rem;
+}
+main{
   overflow: hidden;
 }
+
 section.module-medium{
   padding-top: 0rem !important;
 }
