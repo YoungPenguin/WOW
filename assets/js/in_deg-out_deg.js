@@ -18,28 +18,39 @@ var in_deg = [
     1, 1, 3, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1
 ]
-
+var rnd_out_deg = [ null,  null,  null,  null,  null,  null,  null,  null, 1,  7, 10, 19, 20, 25, 26, 31, 26, 29, 16, 15, 13, 12,  6,  3, null, 1, 1,null, null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+var rnd_in_deg = [  null,   null,   null,   null,   null,   null,   null,  2,  4, 12,  9, 19, 17, 25, 26, 26, 25, 28, 19, 12, 15,  7,  2,  8,
+    2,  null, null,  2,  null,  1,  null,  null,  null,  null,  null,  null,  null,  null,  null,
+    null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,
+    null,  null, null]
 
 lineChart = new Chart(document.getElementById("InOutDeg"), {
     type: 'line',
     data: {
         labels: out_labels,
         datasets: [{
+            label:"Network",
             data: out_deg,
             borderWidth: 1,
             pointBackgroundColor: singleChartColor[0],
             showLine: true,
             backgroundColor: singleChartColor[1],
             borderColor: singleChartColor[0],  
+        },{
+            label:"Random",
+            data: rnd_out_deg,
+            borderWidth: 1,
+            pointBackgroundColor: singleChartColor_2[0],
+            showLine: true,
+            backgroundColor: singleChartColor_2[1],
+            borderColor: singleChartColor_2[0],  
         }]
     },
     options: {
         title: {
             display: true,
             text: 'Out-degree Distribution'
-        },
-        legend: {
-            display: false
         },
         tooltips: {
             callbacks: {
@@ -57,6 +68,7 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
               }
             }],
             yAxes: [{
+              type: "logarithmic",
               display: true,
               scaleLabel: {
                 display: true,
@@ -74,21 +86,28 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
         data: {
             labels: out_labels,
             datasets: [{
+                label:"Network",
                 data: out_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
                 showLine: true,
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
-            }]
+            },{
+                label:"Random",
+                data: rnd_out_deg,
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor_2[0],
+                showLine: true,
+                backgroundColor: singleChartColor_2[1],
+                borderColor: singleChartColor_2[0],  
+            }
+        ]
         },
         options: {
             title: {
                 display: true,
                 text: 'Out-degree Distribution'
-            },
-            legend: {
-                display: false
             },
             tooltips: {
                 callbacks: {
@@ -106,6 +125,7 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
                   }
                 }],
                 yAxes: [{
+                  type: "logarithmic",
                   display: true,
                   scaleLabel: {
                     display: true,
@@ -125,21 +145,27 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         data: {
             labels: in_labels,
             datasets: [{
+                label:"Network",
                 data: in_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
                 showLine: true,
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
+            },{
+                label:"Random",
+                data: rnd_in_deg,
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor_2[0],
+                showLine: true,
+                backgroundColor: singleChartColor_2[1],
+                borderColor: singleChartColor_2[0],  
             }]
         },
         options: {
             title: {
                 display: true,
                 text: 'In-degree Distribution'
-            },
-            legend: {
-                display: false
             },
             tooltips: {
                 callbacks: {
@@ -157,6 +183,7 @@ document.getElementById("In-Degree").addEventListener("click", function () {
                   }
                 }],
                 yAxes: [{
+                    type: "logarithmic",
                   display: true,
                   scaleLabel: {
                     display: true,
