@@ -24,7 +24,7 @@ const labelToRGB = {
     'Alliance': ['rgb(51, 153, 255)', 'rgba(51, 153, 255, 0.2)'],
     'Horde': ['rgb(255, 51, 51)', 'rgba(255, 51, 51, 0.2)'],
     'Neutral': ['rgb(160, 160, 160)', 'rgba(160, 160, 160, 0.2)'],
-    'Male': ['rgb(51, 153, 255)', 'rgba(51, 153, 255, 0.2)'],
+    'Male': ['rgb(0, 105, 209)', 'rgba(0, 105, 209, 0.2)'],
     'Female': ['rgb(212, 74, 204)', 'rgba(212, 74, 204, 0.2)'],
     "Khadgar, Illidan, Lor'themar": ['#62704d', '--'],
     "Deathwing, Sargeras, Yogg-Saron": ['#53868b', '--'],

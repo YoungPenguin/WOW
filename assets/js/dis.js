@@ -191,7 +191,16 @@ var race_backgroundcolors = [
 var chr = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var options = {
-    scales: { yAxes: [{ ticks: { beginAtZero: true } }] },
+    scales: { 
+        yAxes: [{ ticks: { beginAtZero: true } }],
+        xAxes: [{ 
+            ticks: { 
+                autoSkip: false,
+                maxRotation: 0,
+                minRotation: 0 
+            }
+        }]
+    },
     legend: {
         display: false
     },
@@ -213,8 +222,21 @@ var data = {
             borderWidth: 1,
         }]
     },
-
-    options: options
+    options: {
+        scales: { 
+            yAxes: [{ ticks: { beginAtZero: true } }],
+            xAxes: [{ 
+                ticks: { 
+                    autoSkip: false,
+                    maxRotation: 90,
+                    minRotation: 90 
+                }
+            }]
+        },
+        legend: {
+            display: false
+        },
+    }
 };
 
 var barchr = new Chart(ctx, data);
@@ -236,7 +258,7 @@ document.getElementById("gender").addEventListener("click", function () {
             borderWidth: 1
         }],
     }
-    barchr.config.options = options
+    barchr.options = options
     barchr.update();
 });
 
@@ -280,7 +302,7 @@ document.getElementById("status").addEventListener("click", function () {
             borderWidth: 1
         }],
     }
-    barchr.config.options = options
+    barchr.options = options
     barchr.update();
 });
 
@@ -300,6 +322,20 @@ document.getElementById("race").addEventListener("click", function () {
             borderWidth: 1,
         }],
     }
-    barchr.config.options = options
+    barchr.options = {
+        scales: { 
+            yAxes: [{ ticks: { beginAtZero: true } }],
+            xAxes: [{ 
+                ticks: { 
+                    autoSkip: false,
+                    maxRotation: 90,
+                    minRotation: 90 
+                }
+            }]
+        },
+        legend: {
+            display: false
+        },
+    }
     barchr.update();
 });
