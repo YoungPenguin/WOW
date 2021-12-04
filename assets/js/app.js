@@ -71,8 +71,8 @@ function updateWcSelection(){
       (function(root) {
         function embed_document(root) {
           
-        var docs_json = document.getElementById('4913').textContent;
-        var render_items = [{"docid":"21e80ba7-6f98-473e-b8cc-25c5207c739d","root_ids":["4427"],"roots":{"4427":"b7bb9578-c4df-4626-8bcc-d75b0a9633be"}}];
+        var docs_json = document.getElementById('7358').textContent;
+        var render_items = [{"docid":"0971717f-617d-4416-8210-29978e1b12cd","root_ids":["6872"],"roots":{"6872":"c3f285a0-bd01-4bd8-850d-fc6f4e6535cb"}}];
         root.Bokeh.embed.embed_items(docs_json, render_items);
       
         }
@@ -102,9 +102,9 @@ function updateWcSelection(){
 
   function internalSwitch(select, dropdown2, dropdown1, container){
     if(select != "head"){
-      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia]
+      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia, html_alive_peida, html_deceased_peida]
     }else{
-      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head]
+      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head, html_alive_head, html_deceased_head]
     }
      // code block
      switch(dropdown2) {
@@ -123,6 +123,14 @@ function updateWcSelection(){
       case "4":
         // code block
         container.insertAdjacentHTML('afterbegin', names[3]);
+        break;
+      case "5":
+      // code block
+        container.insertAdjacentHTML('afterbegin', names[4]);
+        break;
+      case "6":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[5]);
         break;
       default:
         // code block
@@ -144,6 +152,14 @@ function updateWcSelection(){
         // code block
         container.insertAdjacentHTML('afterbegin',  names[3]);
         break;
+      case "5":
+        // code block
+          container.insertAdjacentHTML('afterbegin', names[4]);
+          break;
+      case "6":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[5]);
+        break;
       default:
         // code block
     }
@@ -152,7 +168,7 @@ function updateWcSelection(){
   var html_alliance_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png" title="Title 1"><img src="assets/images/wowhead/wc_Alliance.png" alt="Gallery Image 1">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png" title="Alliance wowhead"><img src="assets/images/wowhead/wc_Alliance.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -163,7 +179,7 @@ function updateWcSelection(){
   var html_alliance_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png" title="Title 3"><img src="assets/images/wowpedia/wc_Alliance.png" alt="Gallery Image 3">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png" title="Alliance wowpedia"><img src="assets/images/wowpedia/wc_Alliance.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -174,7 +190,7 @@ function updateWcSelection(){
   var html_horde_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Title 2"><img src="assets/images/wowhead/wc_Horde.png" alt="Gallery Image 2">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Horde wowhead"><img src="assets/images/wowhead/wc_Horde.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -184,7 +200,7 @@ function updateWcSelection(){
   var html_horde_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Title 4"><img src="assets/images/wowpedia/wc_Horde.png" alt="Gallery Image 4">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Horde wowpedia"><img src="assets/images/wowpedia/wc_Horde.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -195,7 +211,7 @@ function updateWcSelection(){
   var html_female_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Female.png" title="Title 5"><img src="assets/images/wowhead/wc_Female.png" alt="Gallery Image 5">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Female.png" title="Female wowhead"><img src="assets/images/wowhead/wc_Female.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -205,7 +221,7 @@ function updateWcSelection(){
   var html_female_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Female.png" title="Title 7"><img src="assets/images/wowpedia/wc_Female.png" alt="Gallery Image 7">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Female.png" title="Female wowpedia"><img src="assets/images/wowpedia/wc_Female.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -215,7 +231,7 @@ function updateWcSelection(){
   var html_male_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Male.png" title="Title 6"><img src="assets/images/wowhead/wc_Male.png" alt="Gallery Image 6">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Male.png" title="Male wowhead"><img src="assets/images/wowhead/wc_Male.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -225,7 +241,27 @@ function updateWcSelection(){
   var html_male_peida = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Male.png" title="Title 8"><img src="assets/images/wowpedia/wc_Male.png" alt="Gallery Image 8">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Male.png" title="Male wowpeida"><img src="assets/images/wowpedia/wc_Male.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_alive_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alive.png" title="Alive wowhead"><img src="assets/images/wowhead/wc_Alive.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_alive_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alive.png" title="Alive wowpeida"><img src="assets/images/wowpedia/wc_Alive.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -233,4 +269,24 @@ function updateWcSelection(){
   </div>
   `;
   
+  var html_deceased_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Deceased.png" title="Deceased wowhead"><img src="assets/images/wowhead/wc_Deceased.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_deceased_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Deceased.png" title="Deceased wowpeida"><img src="assets/images/wowpedia/wc_Deceased.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
   
