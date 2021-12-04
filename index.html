@@ -149,8 +149,262 @@
             </div>
           </div>
         </div>
+        
       </section>
+      <section>
 
+        <div class="center table1">
+          <p>
+            <button id="fraction" onclick="tableToggle1(this.id)" >Fraction</button>
+            <button id="gender" onclick="tableToggle1(this.id)" >Gender</button>
+            <button id="status" onclick="tableToggle1(this.id)" >Status</button>
+          </p>
+          <table id="fraction_table" class="styled-table">
+              <thead>
+              <tr>
+                <th>Fraction</th>
+                <th>Horde</th>
+                <th>Alliance</th>
+                <th>Neutral</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>deg</th>
+                <td>0.134007</td>
+                <td>0.179356</td>
+                <td>0.096958</td>
+              </tr>
+              <tr>
+                <th>bwn</th>
+                <td>0.007062</td>
+                <td>0.008802</td>
+                <td>0.004222</td>
+              </tr>
+              <tr>
+                <th>eig</th>
+                <td>0.047472</td>
+                <td>0.067552</td>
+                <td>0.034995</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="gender_table" style="display:none" class="styled-table">
+            <thead>
+              <tr>
+                <th>Gender</th>
+                <th>Male</th>
+                <th>Female</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>deg</th>
+                <td>0.114426</td>
+                <td>0.119036</td>
+              </tr>
+              <tr>
+                <th>bwn</th>
+                <td>0.005290</td>
+                <td>0.005649</td>
+              </tr>
+              <tr>
+                <th>eig</th>
+                <td>0.042228</td>
+                <td>0.041210</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="status_table"  style="display:none"  class="styled-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Deceased</th>
+                <th>Alive</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th>deg</th>
+              <td>0.125125</td>
+              <td>0.102458</td>
+            </tr>
+            <tr>
+              <th>bwn</th>
+              <td>0.006439</td>
+              <td>0.003929</td>
+            </tr>
+            <tr>
+              <th>eig</th>
+              <td>0.044177</td>
+              <td>0.039021</td>
+            </tr>
+          </tbody>
+          </table>
+
+        </div>
+        <div class="center table2">
+          <p>
+            <button id="alliance" onclick="tableToggle2(this.id)">Alliance</button>
+            <button id="horde" onclick="tableToggle2(this.id)">Horde</button>
+            <button id="Male" onclick="tableToggle2(this.id)">Male</button>
+            <button id="Female" onclick="tableToggle2(this.id)">Female</button>
+          </p>
+          <table id="alliance_table"  style="display:none"  class="styled-table alliance">
+              <thead>         
+                <tr>
+                  <th>Alliance</th>
+                  <th>min</th>
+                  <th>max</th>
+                  <th>mean</th>
+                  <th>median</th>
+                  <th>mode</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>In-degree</th>
+                  <td>0</td>
+                  <td>27</td>
+                  <td>9.37</td>
+                  <td>9.0</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th>Out-degree</th>
+                  <td>0</td>
+                  <td>24</td>
+                  <td>9.37</td>
+                  <td>9.0</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <th>Total-degree</th>
+                  <td>0</td>
+                  <td>51</td>
+                  <td>18.73</td>
+                  <td>18.0</td>
+                  <td>6</td>
+                </tr>
+          </table>
+          <table id="horde_table" class="styled-table horde">
+            <thead>         
+              <tr>
+                <th>Horde</th>
+                <th>min</th>
+                <th>max</th>
+                <th>mean</th>
+                <th>median</th>
+                <th>mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>In-degree</th>
+                <td>0</td>
+                <td>27</td>
+                <td>6.12</td>
+                <td>4.0</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Out-degree</th>
+                <td>0</td>
+                <td>22</td>
+                <td>6.12</td>
+                <td>6.0</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th>Total-degree</th>
+                <td>0</td>
+                <td>49</td>
+                <td>12.24</td>
+                <td>10.0</td>
+                <td>7</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="Female_table"  style="display:none"  class="styled-table female">
+            <thead>    
+            <tr>
+              <th>Female</th>
+              <th>min</th>
+              <th>max</th>
+              <th>mean</th>
+              <th>median</th>
+              <th>mode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>In-degree</th>
+              <td>0</td>
+              <td>23</td>
+              <td>3.96</td>
+              <td>2.0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th>Out-degree</th>
+              <td>0</td>
+              <td>16</td>
+              <td>3.96</td>
+              <td>3.0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>Total-degree</th>
+              <td>0</td>
+              <td>36</td>
+              <td>7.92</td>
+              <td>5.0</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+          </table>
+          <table id="Male_table"  style="display:none"  class="styled-table male">
+            <thead> 
+            <tr>
+              <th>Male</th>
+              <th>min</th>
+              <th>max</th>
+              <th>mean</th>
+              <th>median</th>
+              <th>mode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>In-degree</th>
+              <td>0</td>
+              <td>75</td>
+              <td>11.83</td>
+              <td>8.0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th>Out-degree</th>
+              <td>0</td>
+              <td>63</td>
+              <td>11.83</td>
+              <td>8.0</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th>Total-degree</th>
+              <td>1</td>
+              <td>138</td>
+              <td>23.67</td>
+              <td>16.0</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+          </table>
+
+        </div>        
+
+      </section>
       <section id="Analysis" class="module">
         <div class="container" id="WC_section">
           <h1 class="center-text">Word Clouds</h1>
@@ -225,7 +479,6 @@
           </div>
         </div>
       </section>
-
       <section id="Moreplots">
         <div class="container">
           <h1 class="center-text">More Network Analysis</h1>

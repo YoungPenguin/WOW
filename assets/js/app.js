@@ -2,6 +2,22 @@ function Download(url) {
     window.location.href = url 
   }
   
+function tableToggle1(id) {
+  table1 = document.querySelectorAll(".table1 table")
+  for (var i = 0; i < table1.length; i++) {
+    table1[i].style.display= 'none' 
+    document.getElementById(id+"_table").style.display=''
+    }
+
+}
+function tableToggle2(id) {
+  table1 = document.querySelectorAll(".table2 table")
+  for (var i = 0; i < table1.length; i++) {
+    table1[i].style.display= 'none' 
+    document.getElementById(id+"_table").style.display=''
+    }
+
+}
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
