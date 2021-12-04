@@ -102,12 +102,14 @@ function updateWcSelection(){
 
   function internalSwitch(select, dropdown2, dropdown1, container){
     if(select != "head"){
-      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia, html_alive_peida, html_deceased_peida]
+      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia, html_alive_peida, html_deceased_peida, html_0_peida,html_1_peida,html_2_peida,html_3_peida,html_4_peida,html_5_peida,html_6_peida]
     }else{
-      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head, html_alive_head, html_deceased_head]
+      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head, html_alive_head, html_deceased_head,html_0_head,html_1_head,html_2_head,html_3_head,html_4_head,html_5_head,html_6_head]
     }
+    menu = [dropdown2, dropdown1]
      // code block
-     switch(dropdown2) {
+     for(let i = 0; i < 2; i++){
+     switch(menu[i]) {
       case "1":
         // code block
         container.insertAdjacentHTML('afterbegin', names[0]);
@@ -132,37 +134,39 @@ function updateWcSelection(){
         // code block
         container.insertAdjacentHTML('afterbegin', names[5]);
         break;
+      case "7":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[6]);
+        break;
+      case "8":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[7]);
+        break;
+      case "9":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[8]);
+        break;
+      case "10":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[9]);
+        break;
+      case "11":
+      // code block
+        container.insertAdjacentHTML('afterbegin', names[10]);
+        break;
+      case "12":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[11]);
+        break;
+      case "13":
+        // code block
+        container.insertAdjacentHTML('afterbegin', names[12]);
+        break;
       default:
         // code block
     }
-     switch(dropdown1) {
-      case "1":
-        // code block
-        container.insertAdjacentHTML('afterbegin',  names[0]);
-        break;
-      case "2":
-        // code block
-        container.insertAdjacentHTML('afterbegin',  names[1]);
-        break;
-      case "3":
-        // code block
-        container.insertAdjacentHTML('afterbegin',  names[2]);
-        break;
-      case "4":
-        // code block
-        container.insertAdjacentHTML('afterbegin',  names[3]);
-        break;
-      case "5":
-        // code block
-          container.insertAdjacentHTML('afterbegin', names[4]);
-          break;
-      case "6":
-        // code block
-        container.insertAdjacentHTML('afterbegin', names[5]);
-        break;
-      default:
-        // code block
-    }
+  }
+     
   }
 
   var html_alliance_head = `
@@ -290,3 +294,159 @@ function updateWcSelection(){
   </div>
   `;
   
+
+
+
+
+
+
+
+
+
+
+
+  var html_0_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_0.png" title="community 1 wowhead"><img src="assets/images/wowhead/wc_com_0.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_0_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_0.png" title="community 1 wowpeida"><img src="assets/images/wowpedia/wc_com_0.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  
+  var html_1_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_1.png" title="community 2 wowhead"><img src="assets/images/wowhead/wc_com_1.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_1_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_1.png" title="community 2 wowpeida"><img src="assets/images/wowpedia/wc_com_1.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_2_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_2.png" title="community 3 wowhead"><img src="assets/images/wowhead/wc_com_2.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_2_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_2.png" title="community 3 wowpeida"><img src="assets/images/wowpedia/wc_com_2.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_3_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_3.png" title="community 4 wowhead"><img src="assets/images/wowhead/wc_com_3.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+
+  var html_3_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_3.png" title="community 4 wowpeida"><img src="assets/images/wowpedia/wc_com_3.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_4_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_4.png" title="community 5 wowhead"><img src="assets/images/wowhead/wc_com_4.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+
+  var html_4_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_4.png" title="community 5 wowpeida"><img src="assets/images/wowpedia/wc_com_4.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_5_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_5.png" title="community 6 wowhead"><img src="assets/images/wowhead/wc_com_5.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+
+  var html_5_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_5.png" title="community 6 wowpeida"><img src="assets/images/wowpedia/wc_com_5.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+  var html_6_head = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_com_6.png" title="community 7 wowhead"><img src="assets/images/wowhead/wc_com_6.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
+
+  var html_6_peida = `
+  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="gallery-item">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_6.png" title="community 7 wowpeida"><img src="assets/images/wowpedia/wc_com_6.png">
+        <div class="gallery-caption">
+          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+        </div></a></div>
+  </div>
+  </div>
+  `;
