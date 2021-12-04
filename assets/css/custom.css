@@ -15,10 +15,12 @@
 }
 
 * {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   overflow: hidden;
 }
-
+section.module-medium{
+  padding-top: 0rem !important;
+}
 
 html {
   scroll-behavior: smooth;
