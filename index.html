@@ -54,6 +54,7 @@
             </li>
             <li class="dropdown"><a class="dropdown-toggle" href="#Analysis" data-toggle="dropdown">ANALYSIS</a>
               <ul class="dropdown-menu leftauto">
+                <li><a onclick="customScroll('connections', -50)">Character Connections</a></li>
                 <li><a onclick="customScroll('WC_section', -50)">Word Clouds</a></li>
                 <li><a onclick="customScroll('Moreplots', -50)">More Network Analysis</a></li>
                 <li><a onclick="customScroll('CommentsTs', -50)">Sentiment Analysis</a></li>
@@ -70,8 +71,7 @@
       <div class="titan-caption">
         <div class="caption-content">
           <div class="font-alt mb-30 titan-title-size-1 wow_font">World of Warcraft</div>
-          <div class="font-alt mb-40 titan-title-size-4 font-weight-bold wow_font"> Major Character Analysis
-          </div>
+          <div class="font-alt mb-40 titan-title-size-4 font-weight-bold wow_font"> Major Character Analysis</div>
         </div>
       </div>
     </section>
@@ -133,11 +133,14 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="container">
+      <section class="module-medium">
+        <div class="container" id="connections">
           <div class="row multi-columns-row">
               <div class="p-3 text-center center">
                 <h4 class='center-text'>Investigating Character Connections</h4>
+                <p>
+                  In order to see the characteristics of connection between characters, you can use degree distribution plots, along with stats for in-, out- and total-degree, and different centrality measures.
+                </p>
                 <canvas id="InOutDeg"></canvas>
                 <p>
                   <button id="Out-Degree" class="btn btn-d btn-circle">Out-degree</button>
@@ -320,19 +323,19 @@
             </thead>
             <tbody>
               <tr>
-                <th>deg</th>
+                <th>Degree centrality</th>
                 <td>0.134007</td>
                 <td>0.179356</td>
                 <td>0.096958</td>
               </tr>
               <tr>
-                <th>bwn</th>
+                <th>Betweenness centrality </th>
                 <td>0.007062</td>
                 <td>0.008802</td>
                 <td>0.004222</td>
               </tr>
               <tr>
-                <th>eig</th>
+                <th>Eigenvector centrality</th>
                 <td>0.047472</td>
                 <td>0.067552</td>
                 <td>0.034995</td>
@@ -349,17 +352,17 @@
             </thead>
             <tbody>
               <tr>
-                <th>deg</th>
+                <th>Degree centrality</th>
                 <td>0.114426</td>
                 <td>0.119036</td>
               </tr>
               <tr>
-                <th>bwn</th>
+                <th>Betweenness centrality</th>
                 <td>0.005290</td>
                 <td>0.005649</td>
               </tr>
               <tr>
-                <th>eig</th>
+                <th>Eigenvector centrality</th>
                 <td>0.042228</td>
                 <td>0.041210</td>
               </tr>
@@ -375,17 +378,17 @@
             </thead>
             <tbody>
             <tr>
-              <th>deg</th>
+              <th>Degree centrality</th>
               <td>0.125125</td>
               <td>0.102458</td>
             </tr>
             <tr>
-              <th>bwn</th>
+              <th>Betweenness centrality</th>
               <td>0.006439</td>
               <td>0.003929</td>
             </tr>
             <tr>
-              <th>eig</th>
+              <th>Eigenvector centrality</th>
               <td>0.044177</td>
               <td>0.039021</td>
             </tr>
