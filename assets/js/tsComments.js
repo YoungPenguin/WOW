@@ -30,7 +30,7 @@ function plotTs() {
         document.getElementById('tsPlotElement'),
         plotData,
         {
-            title: 'Wowhead comments',
+            title: 'Time Series Analysis of Wowhead Comments',
             xaxis: {
                 title: 'Date'
             },

@@ -557,9 +557,6 @@
             Blah blah something explaining comments and timeseries and blah blah lorem ipsum
           </p>
 
-          <p class='small-header'>
-            Time Series Analysis of Wowhead Comments
-          </p>
           <div 
             class='sentiment-plot'
             id="tsPlotElement"
@@ -595,9 +592,6 @@
           <p>
             Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah lorem ipsum
           </p>
-          <p class='small-header'>
-            Sentiment Distributions     
-          </p>
           <div id="distPlotElement" class='sentiment-plot'></div>
           <select id="dist_metric" onChange="plotDist()">
             <option value="bert_sentiment">Bert sentiment</option>
@@ -614,11 +608,7 @@
         <script src="assets/data/commentDistData.js"></script>
         <script src="assets/data/wikiDistData.js"></script>
         <script src="assets/js/distCommentsAndWiki.js"></script>
-
       </section>
-
-
-
 
 
       <section class="module-extra-small bg-dark">
@@ -662,6 +652,11 @@
 
 </html>
 
+<!-- fix stupid plotly shit -->
+<script>
+plotDist() 
+plotTs()
+</script>
 
 <!-- just the network data -->
 <script type="application/json" id="3454">

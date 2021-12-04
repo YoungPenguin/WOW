@@ -173,6 +173,11 @@ table {
 }
 
 
+.sentiment-plot {
+  max-width: 80vw !important; 
+  margin: auto !important;
+}
+
 
 .bk-tooltip:first-child{
   display: none!important;
