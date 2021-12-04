@@ -152,3 +152,17 @@ table {
   margin-right: 30px;
   margin-bottom: 20px;
 }
+
+
+
+.bk-tooltip:first-child{
+  display: none!important;
+  }
+  
+  .bk-tooltip:last-of-type{
+    position: absolute !important;
+    top:0 !important;
+    right:0 !important;
+    max-width: 25rem;
+  }
+  .bk-tooltip.bk-right.bk-tooltip-arrow::after, .bk-root .bk-tooltip.bk-left.bk-tooltip-arrow::before{display: none!important;}
