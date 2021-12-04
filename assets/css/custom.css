@@ -177,7 +177,7 @@ table {
     margin: 0rem !important;
     padding: 0rem !important;
     max-width: 23rem !important;
-    max-height: 16rem !important;
+    max-height: 20rem !important;
     box-sizing: border-box !important;
   }
   .bk-tooltip.bk-right.bk-tooltip-arrow::after, .bk-root .bk-tooltip.bk-left.bk-tooltip-arrow::before{

@@ -71,8 +71,8 @@ function updateWcSelection(){
       (function(root) {
         function embed_document(root) {
           
-        var docs_json = document.getElementById('3446').textContent;
-        var render_items = [{"docid":"6c9741e2-bcbe-485b-bcb3-1b18f3d1847d","root_ids":["2960"],"roots":{"2960":"30d829ad-4430-4951-afe7-06a9be4a1e82"}}];
+        var docs_json = document.getElementById('3454').textContent;
+        var render_items = [{"docid":"b4981d0e-60a6-498c-83f7-64d173683465","root_ids":["2968"],"roots":{"2968":"de5d91d7-79ee-4498-8f2b-a93e7d0b2f55"}}];
         root.Bokeh.embed.embed_items(docs_json, render_items);
       
         }
