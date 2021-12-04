@@ -171,6 +171,43 @@
         </div>
         <div class="center table2">
           <p class='small-header center-text'>Degree Stats</p>
+          <table id="tabentire_table" class="styled-table entire">
+            <thead>
+              <tr>
+                <th>Full Network</th>
+                <th>min</th>
+                <th>max</th>
+                <th>mean</th>
+                <th>median</th>
+                <th>mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>In-degree</th>
+                <td>0</td>
+                <td>103</td>
+                <td>15.36</td>
+                <td>10.0</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th>Out-degree</th>
+                <td>0</td>
+                <td>84</td>
+                <td>15.36</td>
+                <td>12.0</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th>Total-degree</th>
+                <td>1</td>
+                <td>197</td>
+                <td>30.72</td>
+                <td>21.0</td>
+                <td>13</td>
+              </tr>
+          </table>
           <table id="taballiance_table" style="display:none" class="styled-table alliance">
             <thead>
               <tr>
@@ -208,7 +245,7 @@
                 <td>6</td>
               </tr>
           </table>
-          <table id="tabhorde_table" class="styled-table horde">
+          <table id="tabhorde_table" style="display:none" class="styled-table horde">
             <thead>
               <tr>
                 <th>Horde</th>
@@ -323,6 +360,7 @@
             </tbody>
           </table>
           <p>
+            <button id="tabentire" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Full</button>
             <button id="taballiance" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Alliance</button>
             <button id="tabhorde" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Horde</button>
             <button id="tabMale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Male</button>
@@ -420,7 +458,7 @@
           </p>
         </div>
       </section>
-      <section id="Analysis" class="module">
+      <section id="Analysis" class="module-medium">
         <div class="container" id="WC_section">
           <h1 class="center-text">Word Clouds</h1>
           <p>
@@ -519,6 +557,14 @@
             Blah blah something explaining comments and timeseries and blah blah lorem ipsum
           </p>
 
+          <p class='small-header'>
+            Time Series Analysis of Wowhead Comments
+          </p>
+          <div 
+            class='sentiment-plot'
+            id="tsPlotElement"
+          ></div>
+
           <select id="ts_metric" onChange="plotTs()">
             <option value="bert_sentiment">Bert sentiment</option>
             <option value="vader_sentiment">Vader sentiment</option>
@@ -539,21 +585,20 @@
             <option value="include">Include</option>
             <option value="ignore">Ignore</option>
           </select>
-        </div>
-        <div style="margin-left: auto; margin-right: auto; width: 80vw;" id="tsPlotElement"></div>
-        <script src="assets/data/commentTsData.js"></script>
-        <script src="assets/js/tsComments.js"></script>
+          <script src="assets/data/commentTsData.js"></script>
+          <script src="assets/js/tsComments.js"></script>   
+        </div>  
       </section>
-
-
-
+      
       <section id="DistCommentsAndWiki">
         <div class="center-text">
           <p>
-            Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah
-            lorem ipsum
+            Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah lorem ipsum
           </p>
-
+          <p class='small-header'>
+            Sentiment Distributions     
+          </p>
+          <div id="distPlotElement" class='sentiment-plot'></div>
           <select id="dist_metric" onChange="plotDist()">
             <option value="bert_sentiment">Bert sentiment</option>
             <option value="vader_sentiment">Vader sentiment</option>
@@ -565,11 +610,11 @@
             <option value="community">Community</option>
           </select>
         </div>
-        <div id="distPlotElement"></div>
 
         <script src="assets/data/commentDistData.js"></script>
         <script src="assets/data/wikiDistData.js"></script>
         <script src="assets/js/distCommentsAndWiki.js"></script>
+
       </section>
 
 

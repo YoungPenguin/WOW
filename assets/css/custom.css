@@ -140,7 +140,16 @@ p {
   background-color: #3399FF;
   color: #ffffff;
   text-align: left;
+}
 
+.styled-table.entire tbody tr:last-of-type {
+  border-bottom: 2px solid #957dad;
+}
+  
+.styled-table.entire thead tr {
+  background-color: #957dad;
+  color: #ffffff;
+  text-align: left;
 }
 
 .small-header {
@@ -153,6 +162,7 @@ table {
   margin-bottom: 20px !important;
   margin-top: 10px !important;
 }
+
 
 .network-visual {
   margin-left: 5vw;
