@@ -168,7 +168,7 @@ function updateWcSelection(){
   var html_alliance_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png" title="Title 1"><img src="assets/images/wowhead/wc_Alliance.png" alt="Gallery Image 1">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alliance.png" title="Alliance wowhead"><img src="assets/images/wowhead/wc_Alliance.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -179,7 +179,7 @@ function updateWcSelection(){
   var html_alliance_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png" title="Title 3"><img src="assets/images/wowpedia/wc_Alliance.png" alt="Gallery Image 3">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alliance.png" title="Alliance wowpedia"><img src="assets/images/wowpedia/wc_Alliance.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -190,7 +190,7 @@ function updateWcSelection(){
   var html_horde_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Title 2"><img src="assets/images/wowhead/wc_Horde.png" alt="Gallery Image 2">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Horde.png" title="Horde wowhead"><img src="assets/images/wowhead/wc_Horde.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -200,7 +200,7 @@ function updateWcSelection(){
   var html_horde_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Title 4"><img src="assets/images/wowpedia/wc_Horde.png" alt="Gallery Image 4">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Horde.png" title="Horde wowpedia"><img src="assets/images/wowpedia/wc_Horde.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -211,7 +211,7 @@ function updateWcSelection(){
   var html_female_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Female.png" title="Title 5"><img src="assets/images/wowhead/wc_Female.png" alt="Gallery Image 5">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Female.png" title="Female wowhead"><img src="assets/images/wowhead/wc_Female.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -221,7 +221,7 @@ function updateWcSelection(){
   var html_female_pedia = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Female.png" title="Title 7"><img src="assets/images/wowpedia/wc_Female.png" alt="Gallery Image 7">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Female.png" title="Female wowpedia"><img src="assets/images/wowpedia/wc_Female.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -231,7 +231,7 @@ function updateWcSelection(){
   var html_male_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Male.png" title="Title 6"><img src="assets/images/wowhead/wc_Male.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Male.png" title="Male wowhead"><img src="assets/images/wowhead/wc_Male.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -241,7 +241,7 @@ function updateWcSelection(){
   var html_male_peida = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Male.png" title="Title 8"><img src="assets/images/wowpedia/wc_Male.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Male.png" title="Male wowpeida"><img src="assets/images/wowpedia/wc_Male.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -251,7 +251,7 @@ function updateWcSelection(){
   var html_alive_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alive.png" title="Title 6"><img src="assets/images/wowhead/wc_Alive.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Alive.png" title="Alive wowhead"><img src="assets/images/wowhead/wc_Alive.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -261,7 +261,7 @@ function updateWcSelection(){
   var html_alive_peida = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alive.png" title="Title 8"><img src="assets/images/wowpedia/wc_Alive.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Alive.png" title="Alive wowpeida"><img src="assets/images/wowpedia/wc_Alive.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -272,7 +272,7 @@ function updateWcSelection(){
   var html_deceased_head = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Deceased.png" title="Title 6"><img src="assets/images/wowhead/wc_Deceased.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Deceased.png" title="Deceased wowhead"><img src="assets/images/wowhead/wc_Deceased.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
@@ -282,7 +282,7 @@ function updateWcSelection(){
   var html_deceased_peida = `
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Deceased.png" title="Title 8"><img src="assets/images/wowpedia/wc_Deceased.png">
+    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Deceased.png" title="Deceased wowpeida"><img src="assets/images/wowpedia/wc_Deceased.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
