@@ -116,7 +116,7 @@
       <section class="module-medium" id="demos">
         <div class="container">
           <div class="row multi-columns-row">
-              <div class="p-3 text-center">  <!--  -->
+              <div class="p-3 text-center center">  <!--  -->
                 <h4 class='center-text'>Introduction</h4>
                 <p>
                     This website will take you on a tour, analysing the <a href="https://wowpedia.fandom.com/wiki/Major_characters">Major characters in Warcraft</a>, by accessing their <a href="https://wowpedia.fandom.com/wiki/Wowpedia">wowpedia</a> pages and extracting user comments from their <a href="https://www.wowhead.com">wowhead</a> threads. 
@@ -125,22 +125,17 @@
                     In order to do so, a network is created, where nodes are each of the major characters, and edges between them arise when one characters wowpedia page links to anothers wowpedia page. This resulted in a network consisting in 261 characters with 4006 edges connecting them, as seen on the visualization on the right.
                 </p>
                 <p class='small-header'>Network Visualization</p>
-              </div>
-                <div class="bk-root" id="30d829ad-4430-4951-afe7-06a9be4a1e82" data-root-id="2960"></div>
+                <div class="bk-root network-visual" id="30d829ad-4430-4951-afe7-06a9be4a1e82" data-root-id="2960"></div>
                 <p>
-                    The nodes are colored according to their faction (red for Horde, blue for Alliance and gray for others, such as bosses in the game). Additionally, edges are colored according to the relationships of the two nodes, where gray links from any node to a neutral node, blue is between two alliance nodes, red is between two horde nodes and green is between a horde and alliance node.
+                  The nodes are colored according to their faction (red for Horde, blue for Alliance and gray for others, such as bosses in the game). Additionally, edges are colored according to the relationships of the two nodes, where gray links from any node to a neutral node, blue is between two alliance nodes, red is between two horde nodes and green is between a horde and alliance node.
                 </p>
-
-              <div class="center">
                 <canvas id="InOutDeg"></canvas>
                 <p>
                   <button id="Out-Degree">Out-degree</button>
                   <button id="In-Degree">In-degree</button>
                   <button id="corr">Degree Correlation</button>
                 </p>
-              </div>
-           
-      
+            </div>
           </div>
         </div>
         
