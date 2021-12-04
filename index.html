@@ -86,7 +86,6 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-8 col-lg-9">
-
               <ul class="filter font-alt" id="filters" style="margin:auto;">
                 <li>
                   <div class="callout-btn-box">
@@ -97,20 +96,14 @@
                     </a>
                 </div>
                 </li>
-               
                 <li >
-                  
-                    <a class="btn btn-border-w btn-circle" onclick="NewTab('https://github.com/simonamtoft/warcraft-major-character-analysis')"
-                    >
+                    <a class="btn btn-border-w btn-circle" onclick="NewTab('https://github.com/simonamtoft/warcraft-major-character-analysis')">
                         Analysis GitHub
                     </a>
-               
                 </li>
-        
                 <li>
                   <div class="callout-btn-box">
-                    <a class="btn btn-border-w btn-circle" onclick="NewTab('https://github.com/YoungPenguin/WOWenShittyWebsite')"
-                    >
+                    <a class="btn btn-border-w btn-circle" onclick="NewTab('https://github.com/YoungPenguin/WOWenShittyWebsite')">
                         Website GitHub
                     </a>
                 </div>
@@ -123,7 +116,6 @@
       <section class="module-medium" id="demos">
         <div class="container">
           <div class="row multi-columns-row">
-           
               <div class="p-3 text-center">  <!--  -->
                 <h4 class='center-text'>Introduction</h4>
                 <p>
@@ -132,10 +124,11 @@
                 <p>
                     In order to do so, a network is created, where nodes are each of the major characters, and edges between them arise when one characters wowpedia page links to anothers wowpedia page. This resulted in a network consisting in 261 characters with 4006 edges connecting them, as seen on the visualization on the right.
                 </p>
+                <p class='small-header'>Network Visualization</p>
               </div>
                 <div class="bk-root" id="30d829ad-4430-4951-afe7-06a9be4a1e82" data-root-id="2960"></div>
                 <p>
-                    Major character network visualization, where nodes are colored according to their faction (red for Horde, blue for Alliance and gray for others, such as bosses in the game). Additionally, edges are colored according to the relationships of the two nodes, where gray links from any node to a neutral node, blue is between two alliance nodes, red is between two horde nodes and green is between a horde and alliance node.
+                    The nodes are colored according to their faction (red for Horde, blue for Alliance and gray for others, such as bosses in the game). Additionally, edges are colored according to the relationships of the two nodes, where gray links from any node to a neutral node, blue is between two alliance nodes, red is between two horde nodes and green is between a horde and alliance node.
                 </p>
 
               <div class="center">
@@ -154,6 +147,7 @@
       </section>
       <section>
         <div class="center table2">
+            <p class='small-header center-text'>Degree Stats</p>
             <table id="taballiance_table"  style="display:none"  class="styled-table alliance">
                 <thead>         
                   <tr>
@@ -313,6 +307,7 @@
               </p>
           </div>  
         <div class="center table1">
+          <p class='small-header center-text'>Centrality Measures</p>
           <table id="tabfraction_table" class="styled-table">
               <thead>
               <tr>

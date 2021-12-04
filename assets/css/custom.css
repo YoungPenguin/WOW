@@ -133,4 +133,10 @@ p {
   background-color: #3399FF;
   color: #ffffff;
   text-align: left;
+
+}
+
+.small-header {
+  font-weight: 800;
+  margin-bottom: 0;
 }
