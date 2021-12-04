@@ -87,7 +87,7 @@ var race_colors = [
     'rgb(194, 200, 207)',   // Pandaren
     'rgb(8, 146, 208)',     // Proto-Drake
     'rgb(187, 0, 0)',       // Red Drake
-    'rgb(190, 159, 103)', // Satyr
+    'rgb(190, 159, 103)',   // Satyr
     'rgb(190, 159, 103)',   // Stag
     'rgb(89, 49, 32)',      // Tauren
     'rgb(67, 70, 75)',      // Titan
@@ -150,7 +150,7 @@ var race_backgroundcolors = [
     'rgba(230, 153, 0, 0.3)',     // Kyrian
     'rgba(189, 184, 177, 0.3)',   // Lich
     'rgba(25, 84, 62, 0.3)',      // Loa
-    'rgba(92, 62, 42, 0.3',      // Mag'Har Orc
+    'rgba(92, 62, 42, 0.3',       // Mag'Har Orc
     'rgba(87, 156, 121, 0.3)',    // Maldraxxi
     'rgba(187, 0, 0, 0.3)',       // Man'Ari Eredar
     'rgba(115, 211, 0, 0.3)',     // Mantid
@@ -169,7 +169,7 @@ var race_backgroundcolors = [
     'rgba(194, 200, 207, 0.3)',   // Pandaren
     'rgba(8, 146, 208, 0.3)',     // Proto-Drake
     'rgba(187, 0, 0, 0.3)',       // Red Drake
-    'rgba(190, 159, 103, 0.3)', // Satyr
+    'rgba(190, 159, 103, 0.3)',   // Satyr
     'rgba(190, 159, 103, 0.3)',   // Stag
     'rgba(89, 49, 32, 0.3)',      // Tauren
     'rgba(67, 70, 75, 0.3)',      // Titan
