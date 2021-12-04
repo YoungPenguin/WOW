@@ -15,10 +15,12 @@
 }
 
 * {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   overflow: hidden;
 }
-
+section.module-medium{
+  padding-top: 0rem !important;
+}
 
 html {
   scroll-behavior: smooth;
@@ -169,3 +171,25 @@ table {
   margin-right: 5vw;
   margin-bottom: 20px;
 }
+
+
+
+.bk-tooltip:first-child{
+  display: none!important;
+  }
+  
+  .bk-tooltip:last-of-type{
+    position: absolute !important;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:0 !important;
+    margin: 0rem !important;
+    padding: 0rem !important;
+    max-width: 23rem !important;
+    max-height: 20rem !important;
+    box-sizing: border-box !important;
+  }
+  .bk-tooltip.bk-right.bk-tooltip-arrow::after, .bk-root .bk-tooltip.bk-left.bk-tooltip-arrow::before{
+    display: none!important;
+  }
