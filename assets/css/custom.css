@@ -16,11 +16,8 @@
 
 * {
   font-size: 1.8rem;
+  overflow: hidden;
 }
-
-/* li.nav-link {
-  font-size: 12px !important;
-} */
 
 
 html {
