@@ -12,10 +12,16 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
     data: {
         labels: out_labels,
         datasets: [{
-            data: [2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
+            data: [
+                2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
                 3, 7, 6, 3, 3, 5, 8, 4, 5, 1, 1, 1, 4, 3, 2, 1, 1,
-                3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1],
-            borderWidth: 1
+                3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1
+            ],
+            borderWidth: 1,
+            pointBackgroundColor: singleChartColor[0],
+            showLine: true,
+            backgroundColor: singleChartColor[1],
+            borderColor: singleChartColor[0],  
         }]
     },
     options: {
@@ -59,10 +65,15 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
         data: {
             labels: out_labels,
             datasets: [{
-                data: [2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
+                data: [
+                    2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
                     3, 7, 6, 3, 3, 5, 8, 4, 5, 1, 1, 1, 4, 3, 2, 1, 1,
                     3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1],
-                borderWidth: 1
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor[0],
+                showLine: true,
+                backgroundColor: singleChartColor[1],
+                borderColor: singleChartColor[0],  
             }]
         },
         options: {
@@ -108,11 +119,16 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         data: {
             labels: in_labels,
             datasets: [{
-                data: [3, 12, 14, 14, 13, 17, 18, 12, 16, 6, 13, 8, 5, 7, 9, 5, 9,
+                data: [
+                    3, 12, 14, 14, 13, 17, 18, 12, 16, 6, 13, 8, 5, 7, 9, 5, 9,
                     5, 8, 3, 4, 3, 3, 2, 1, 5, 4, 3, 2, 2, 2, 2, 2, 2,
                     1, 1, 3, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                     1, 1, 1, 1],
-                borderWidth: 1
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor[0],
+                showLine: true,
+                backgroundColor: singleChartColor[1],
+                borderColor: singleChartColor[0],  
             }]
         },
         options: {
@@ -1205,6 +1221,7 @@ document.getElementById("corr").addEventListener("click", function () {
             datasets: [{
                 label: 'corr', // Name the series
                 data: data1, // Specify the data values array
+                pointBackgroundColor: singleChartColor[2],
             }]
         },
         options: {

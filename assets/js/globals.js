@@ -35,3 +35,7 @@ const labelToRGB = {
     "Jaina Proudmoore, Anduin Wrynn, Garrosh": ['#432f20', '--']
 }
 
+
+
+const singleChartColor = ['rgb(149, 125, 173)', 'rgba(149, 125, 173, 0.3)', 'rgba(149, 125, 173, 0.6)']
+
