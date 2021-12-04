@@ -21,7 +21,7 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
     options: {
         title: {
             display: true,
-            text: 'Out Degree Distribution of Gcc'
+            text: 'Out-degree Distribution'
         },
         legend: {
             display: false
@@ -68,7 +68,7 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
         options: {
             title: {
                 display: true,
-                text: 'Out Degree Distribution of Gcc'
+                text: 'Out-degree Distribution'
             },
             legend: {
                 display: false
@@ -118,7 +118,7 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         options: {
             title: {
                 display: true,
-                text: 'In Degree Distribution of Gcc'
+                text: 'In-degree Distribution'
             },
             legend: {
                 display: false
@@ -1210,7 +1210,7 @@ document.getElementById("corr").addEventListener("click", function () {
         options: {
             title: {
                 display: true,
-                text: 'Correlation'
+                text: 'Correlation Between In- and Out-degree'
             },
             legend: {
                 display: false
@@ -1227,14 +1227,14 @@ document.getElementById("corr").addEventListener("click", function () {
                   display: true,
                   scaleLabel: {
                     display: true,
-                    labelString: 'Outdegree'
+                    labelString: 'Out-degree'
                   }
                 }],
                 yAxes: [{
                   display: true,
                   scaleLabel: {
                     display: true,
-                    labelString: 'Indegree'
+                    labelString: 'In-degree'
                   }
                 }]
               }
