@@ -46,7 +46,7 @@ html {
 }
 
 p {
-  text-align: center !important;
+  text-align: center;
 }
 
 .center {
@@ -202,3 +202,17 @@ table {
   .bk-tooltip.bk-right.bk-tooltip-arrow::after, .bk-root .bk-tooltip.bk-left.bk-tooltip-arrow::before{
     display: none!important;
   }
+
+  .noCenter{
+    text-align: left;
+  }
+.nopaddingormargin{
+  margin: 0px;
+  padding: 0px;
+}
+  @media only screen and (max-width: 760px) {
+    .noCenter{
+      text-align: center;
+    }
+  }
+  
