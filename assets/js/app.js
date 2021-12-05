@@ -102,9 +102,9 @@ function updateWcSelection(){
 
   function internalSwitch(select, dropdown2, dropdown1, container){
     if(select != "head"){
-      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia, html_alive_peida, html_deceased_peida, html_0_peida,html_1_peida,html_2_peida,html_3_peida,html_4_peida,html_5_peida,html_6_peida, html_U_peida]
+      names = [html_alliance_pedia, html_horde_pedia, html_male_peida, html_female_pedia, html_alive_peida, html_deceased_peida, html_0_peida,html_1_peida,html_2_peida,html_3_peida,html_4_peida,html_5_peida,html_6_peida]
     }else{
-      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head, html_alive_head, html_deceased_head,html_0_head,html_1_head,html_2_head,html_3_head,html_4_head,html_5_head,html_6_head, html_U_head]
+      names = [html_alliance_head, html_horde_head, html_male_head, html_female_head, html_alive_head, html_deceased_head,html_0_head,html_1_head,html_2_head,html_3_head,html_4_head,html_5_head,html_6_head]
     }
     menu = [dropdown2, dropdown1]
      // code block
@@ -161,10 +161,6 @@ function updateWcSelection(){
       case "13":
         // code block
         container.insertAdjacentHTML('afterbegin', names[12]);
-        break;
-      case "14":
-        // code block
-        container.insertAdjacentHTML('afterbegin', names[13]);
         break;
       default:
         // code block
@@ -438,28 +434,6 @@ function updateWcSelection(){
   <div class="col-sm-6 col-md-6 col-lg-6">
   <div class="gallery-item">
     <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_com_6.png" title="community 7 wowpeida"><img src="assets/images/wowpedia/wc_com_6.png">
-        <div class="gallery-caption">
-          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-        </div></a></div>
-  </div>
-  </div>
-  `;
-
-  var html_U_head = `
-  <div class="col-sm-6 col-md-6 col-lg-6">
-  <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowhead/wc_Unknown.png" title="Gender Unknown wowhead"><img src="assets/images/wowhead/wc_Unknown.png">
-        <div class="gallery-caption">
-          <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-        </div></a></div>
-  </div>
-  </div>
-  `;
-
-  var html_U_peida = `
-  <div class="col-sm-6 col-md-6 col-lg-6">
-  <div class="gallery-item">
-    <div class="gallery-image"><a class="gallery" href="assets/images/wowpedia/wc_Unknown.png" title="Gender Unknown wowpeida"><img src="assets/images/wowpedia/wc_Unknown.png">
         <div class="gallery-caption">
           <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
         </div></a></div>
