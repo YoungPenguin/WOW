@@ -20,7 +20,9 @@
 main{
   overflow: hidden;
 }
-
+a{
+  cursor: pointer;
+}
 figcaption{
   font-weight: bold;
 }
