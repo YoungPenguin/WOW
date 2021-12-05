@@ -87,10 +87,14 @@ p {
 }
 
 .styled-table thead tr {
-  background-color: #A0A0A0;
+  background-color: #95AD7D;
   color: #ffffff;
   text-align: left;
 }
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #95AD7D;
+  }
 
 .styled-table th,
 .styled-table td {
@@ -103,10 +107,6 @@ p {
 
 .styled-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #A0A0A0;
 }
 
 .styled-table.horde tbody tr:last-of-type {
@@ -143,6 +143,16 @@ p {
   color: #ffffff;
   text-align: left;
 }
+
+.styled-table.neutral tbody tr:last-of-type {
+    border-bottom: 2px solid #A0A0A0 ;
+  }
+  
+  .styled-table.neutral thead tr {
+    background-color: #A0A0A0 ;
+    color: #ffffff;
+    text-align: left;
+  }
 
 .styled-table.alliance tbody tr:last-of-type {
   border-bottom: 2px solid #3399FF;
