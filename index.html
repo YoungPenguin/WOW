@@ -161,303 +161,313 @@
               can use degree distribution plots, along with stats for in-, out- and total-degree, and different
               centrality measures.
             </p>
+            <p>
+              Below plots of the Out- and In-degree distributions of the Warcraft network is shwon along with a random network with similar stats as the Warcraft network, where we see that the Warcraft network is not random at all! Additionally, a scatter plot of the In- vs. out-degree for each character in the network is shown. 
+            </p>
             <canvas id="InOutDeg"></canvas>
             <p style='margin-top: 10px'>
               <button id="Out-Degree" class="btn btn-g btn-round">Out-degree</button>
               <button id="In-Degree" class="btn btn-g btn-round">In-degree</button>
               <button id="corr" class="btn btn-g btn-round">Degree Correlation</button>
             </p>
+            <p style='padding-top: 20px;'>
+              Talk about degree stats blablabla.
+            </p>
+            <div class="center table2">
+              <p class='small-header center-text'>Degree Stats</p>
+              <table id="tabentire_table" class="styled-table entire">
+                <thead>
+                  <tr>
+                    <th>Full Network</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>103</td>
+                    <td>15.36</td>
+                    <td>10.0</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>84</td>
+                    <td>15.36</td>
+                    <td>12.0</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>1</td>
+                    <td>197</td>
+                    <td>30.72</td>
+                    <td>21.0</td>
+                    <td>13</td>
+                  </tr>
+              </table>
+              <table id="taballiance_table" style="display:none" class="styled-table alliance">
+                <thead>
+                  <tr>
+                    <th>Alliance</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>27</td>
+                    <td>9.37</td>
+                    <td>9.0</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>24</td>
+                    <td>9.37</td>
+                    <td>9.0</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>0</td>
+                    <td>51</td>
+                    <td>18.73</td>
+                    <td>18.0</td>
+                    <td>6</td>
+                  </tr>
+              </table>
+              <table id="tabhorde_table" style="display:none" class="styled-table horde">
+                <thead>
+                  <tr>
+                    <th>Horde</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>27</td>
+                    <td>6.12</td>
+                    <td>4.0</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>22</td>
+                    <td>6.12</td>
+                    <td>6.0</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>12.24</td>
+                    <td>10.0</td>
+                    <td>7</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="tabFemale_table" style="display:none" class="styled-table female">
+                <thead>
+                  <tr>
+                    <th>Female</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>23</td>
+                    <td>3.96</td>
+                    <td>2.0</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>16</td>
+                    <td>3.96</td>
+                    <td>3.0</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>0</td>
+                    <td>36</td>
+                    <td>7.92</td>
+                    <td>5.0</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="tabMale_table" style="display:none" class="styled-table male">
+                <thead>
+                  <tr>
+                    <th>Male</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>75</td>
+                    <td>11.83</td>
+                    <td>8.0</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>63</td>
+                    <td>11.83</td>
+                    <td>8.0</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>1</td>
+                    <td>138</td>
+                    <td>23.67</td>
+                    <td>16.0</td>
+                    <td>9</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                <button id="tabentire" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Full</button>
+                <button id="taballiance" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Alliance</button>
+                <button id="tabhorde" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Horde</button>
+                <button id="tabMale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Male</button>
+                <button id="tabFemale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Female</button>
+              </p>
+            </div>
+            <p style='padding-top: 20px;'>
+              Talk about centrality measures blablabla.
+            </p>
+            <div class="center table1">
+              <p class='small-header center-text'>Centrality Measures</p>
+              <table id="tabfraction_table" class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Faction</th>
+                    <th>Horde</th>
+                    <th>Alliance</th>
+                    <th>Neutral</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Degree centrality</th>
+                    <td>0.134007</td>
+                    <td>0.179356</td>
+                    <td>0.096958</td>
+                  </tr>
+                  <tr>
+                    <th>Betweenness centrality </th>
+                    <td>0.007062</td>
+                    <td>0.008802</td>
+                    <td>0.004222</td>
+                  </tr>
+                  <tr>
+                    <th>Eigenvector centrality</th>
+                    <td>0.047472</td>
+                    <td>0.067552</td>
+                    <td>0.034995</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="tabgender_table" style="display:none" class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Gender</th>
+                    <th>Male</th>
+                    <th>Female</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Degree centrality</th>
+                    <td>0.114426</td>
+                    <td>0.119036</td>
+                  </tr>
+                  <tr>
+                    <th>Betweenness centrality</th>
+                    <td>0.005290</td>
+                    <td>0.005649</td>
+                  </tr>
+                  <tr>
+                    <th>Eigenvector centrality</th>
+                    <td>0.042228</td>
+                    <td>0.041210</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="tabstatus_table" style="display:none" class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Status</th>
+                    <th>Deceased</th>
+                    <th>Alive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Degree centrality</th>
+                    <td>0.125125</td>
+                    <td>0.102458</td>
+                  </tr>
+                  <tr>
+                    <th>Betweenness centrality</th>
+                    <td>0.006439</td>
+                    <td>0.003929</td>
+                  </tr>
+                  <tr>
+                    <th>Eigenvector centrality</th>
+                    <td>0.044177</td>
+                    <td>0.039021</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                <button id="tabfraction" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Faction</button>
+                <button id="tabgender" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Gender</button>
+                <button id="tabstatus" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Status</button>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="center table2">
-          <p class='small-header center-text'>Degree Stats</p>
-          <table id="tabentire_table" class="styled-table entire">
-            <thead>
-              <tr>
-                <th>Full Network</th>
-                <th>min</th>
-                <th>max</th>
-                <th>mean</th>
-                <th>median</th>
-                <th>mode</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>In-degree</th>
-                <td>0</td>
-                <td>103</td>
-                <td>15.36</td>
-                <td>10.0</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th>Out-degree</th>
-                <td>0</td>
-                <td>84</td>
-                <td>15.36</td>
-                <td>12.0</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th>Total-degree</th>
-                <td>1</td>
-                <td>197</td>
-                <td>30.72</td>
-                <td>21.0</td>
-                <td>13</td>
-              </tr>
-          </table>
-          <table id="taballiance_table" style="display:none" class="styled-table alliance">
-            <thead>
-              <tr>
-                <th>Alliance</th>
-                <th>min</th>
-                <th>max</th>
-                <th>mean</th>
-                <th>median</th>
-                <th>mode</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>In-degree</th>
-                <td>0</td>
-                <td>27</td>
-                <td>9.37</td>
-                <td>9.0</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <th>Out-degree</th>
-                <td>0</td>
-                <td>24</td>
-                <td>9.37</td>
-                <td>9.0</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <th>Total-degree</th>
-                <td>0</td>
-                <td>51</td>
-                <td>18.73</td>
-                <td>18.0</td>
-                <td>6</td>
-              </tr>
-          </table>
-          <table id="tabhorde_table" style="display:none" class="styled-table horde">
-            <thead>
-              <tr>
-                <th>Horde</th>
-                <th>min</th>
-                <th>max</th>
-                <th>mean</th>
-                <th>median</th>
-                <th>mode</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>In-degree</th>
-                <td>0</td>
-                <td>27</td>
-                <td>6.12</td>
-                <td>4.0</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <th>Out-degree</th>
-                <td>0</td>
-                <td>22</td>
-                <td>6.12</td>
-                <td>6.0</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <th>Total-degree</th>
-                <td>0</td>
-                <td>49</td>
-                <td>12.24</td>
-                <td>10.0</td>
-                <td>7</td>
-              </tr>
-            </tbody>
-          </table>
-          <table id="tabFemale_table" style="display:none" class="styled-table female">
-            <thead>
-              <tr>
-                <th>Female</th>
-                <th>min</th>
-                <th>max</th>
-                <th>mean</th>
-                <th>median</th>
-                <th>mode</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>In-degree</th>
-                <td>0</td>
-                <td>23</td>
-                <td>3.96</td>
-                <td>2.0</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th>Out-degree</th>
-                <td>0</td>
-                <td>16</td>
-                <td>3.96</td>
-                <td>3.0</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th>Total-degree</th>
-                <td>0</td>
-                <td>36</td>
-                <td>7.92</td>
-                <td>5.0</td>
-                <td>3</td>
-              </tr>
-            </tbody>
-          </table>
-          <table id="tabMale_table" style="display:none" class="styled-table male">
-            <thead>
-              <tr>
-                <th>Male</th>
-                <th>min</th>
-                <th>max</th>
-                <th>mean</th>
-                <th>median</th>
-                <th>mode</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>In-degree</th>
-                <td>0</td>
-                <td>75</td>
-                <td>11.83</td>
-                <td>8.0</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th>Out-degree</th>
-                <td>0</td>
-                <td>63</td>
-                <td>11.83</td>
-                <td>8.0</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <th>Total-degree</th>
-                <td>1</td>
-                <td>138</td>
-                <td>23.67</td>
-                <td>16.0</td>
-                <td>9</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            <button id="tabentire" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Full</button>
-            <button id="taballiance" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Alliance</button>
-            <button id="tabhorde" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Horde</button>
-            <button id="tabMale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Male</button>
-            <button id="tabFemale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Female</button>
-          </p>
-        </div>
-        <div class="center table1">
-          <p class='small-header center-text'>Centrality Measures</p>
-          <table id="tabfraction_table" class="styled-table">
-            <thead>
-              <tr>
-                <th>Faction</th>
-                <th>Horde</th>
-                <th>Alliance</th>
-                <th>Neutral</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Degree centrality</th>
-                <td>0.134007</td>
-                <td>0.179356</td>
-                <td>0.096958</td>
-              </tr>
-              <tr>
-                <th>Betweenness centrality </th>
-                <td>0.007062</td>
-                <td>0.008802</td>
-                <td>0.004222</td>
-              </tr>
-              <tr>
-                <th>Eigenvector centrality</th>
-                <td>0.047472</td>
-                <td>0.067552</td>
-                <td>0.034995</td>
-              </tr>
-            </tbody>
-          </table>
-          <table id="tabgender_table" style="display:none" class="styled-table">
-            <thead>
-              <tr>
-                <th>Gender</th>
-                <th>Male</th>
-                <th>Female</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Degree centrality</th>
-                <td>0.114426</td>
-                <td>0.119036</td>
-              </tr>
-              <tr>
-                <th>Betweenness centrality</th>
-                <td>0.005290</td>
-                <td>0.005649</td>
-              </tr>
-              <tr>
-                <th>Eigenvector centrality</th>
-                <td>0.042228</td>
-                <td>0.041210</td>
-              </tr>
-            </tbody>
-          </table>
-          <table id="tabstatus_table" style="display:none" class="styled-table">
-            <thead>
-              <tr>
-                <th>Status</th>
-                <th>Deceased</th>
-                <th>Alive</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Degree centrality</th>
-                <td>0.125125</td>
-                <td>0.102458</td>
-              </tr>
-              <tr>
-                <th>Betweenness centrality</th>
-                <td>0.006439</td>
-                <td>0.003929</td>
-              </tr>
-              <tr>
-                <th>Eigenvector centrality</th>
-                <td>0.044177</td>
-                <td>0.039021</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            <button id="tabfraction" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Faction</button>
-            <button id="tabgender" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Gender</button>
-            <button id="tabstatus" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Status</button>
-          </p>
-        </div>
       </section>
+
       <section id="WC_section" class="module-medium">
         <div class="container">
           <h1 class="center-text">Word Clouds</h1>
