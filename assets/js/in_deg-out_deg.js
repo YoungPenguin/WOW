@@ -30,7 +30,7 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
     data: {
         labels: out_labels,
         datasets: [{
-            label:"Network",
+            label:"Warcraft Network",
             data: out_deg,
             borderWidth: 1,
             pointBackgroundColor: singleChartColor[0],
@@ -38,7 +38,7 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
             backgroundColor: singleChartColor[1],
             borderColor: singleChartColor[0],  
         },{
-            label:"Random",
+            label:"Random Network",
             data: rnd_out_deg,
             borderWidth: 1,
             pointBackgroundColor: singleChartColor_2[0],
@@ -86,7 +86,7 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
         data: {
             labels: out_labels,
             datasets: [{
-                label:"Network",
+                label:"Warcraft Network",
                 data: out_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
@@ -94,7 +94,7 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
             },{
-                label:"Random",
+                label:"Random Network",
                 data: rnd_out_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor_2[0],
@@ -145,7 +145,7 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         data: {
             labels: in_labels,
             datasets: [{
-                label:"Network",
+                label:"Warcraft Network",
                 data: in_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
@@ -153,7 +153,7 @@ document.getElementById("In-Degree").addEventListener("click", function () {
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
             },{
-                label:"Random",
+                label:"Random Network",
                 data: rnd_in_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor_2[0],
