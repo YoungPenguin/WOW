@@ -2388,8 +2388,8 @@ document.getElementById("corr").addEventListener("click", function () {
     lineChart = new Chart(document.getElementById("InOutDeg"), {
         type: 'scatter',
         data: {
-            labels: names,
             datasets: [{
+                labels: names,
                 label: 'Warcraft Network', // Name the series
                 data: data1, // Specify the data values array
                 pointBackgroundColor: singleChartColor[2],
@@ -2411,8 +2411,15 @@ document.getElementById("corr").addEventListener("click", function () {
             tooltips: {
                 callbacks: {
                     label: function (tooltipItem, data) {
-                        var label = data.labels[tooltipItem.index];
-                        return label + ' (' + tooltipItem.xLabel + ', ' + tooltipItem.yLabel + ')';
+                        var dataset = data.datasets[tooltipItem.datasetIndex]
+                        var index = tooltipItem.index
+                        // var label = data.labels[tooltipItem.index];
+                        if ('labels' in dataset) {
+                            var label = dataset.labels[index]
+                            return label + ' (' + tooltipItem.xLabel + ', ' + tooltipItem.yLabel + ')';
+                        } else {
+                            return '(' + tooltipItem.xLabel + ', ' + tooltipItem.yLabel + ')'
+                        }
                     }
                 }
             },

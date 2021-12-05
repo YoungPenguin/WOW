@@ -129,9 +129,10 @@
               their <a href="https://wowpedia.fandom.com/wiki/Wowpedia">wowpedia</a> pages and extracting user comments
               from their <a href="https://www.wowhead.com">wowhead</a> threads. Almost eveything on this website is in some way, shape, or form interactive, so please remember to play around. 
             </p>
-
+            <p>
+                In the Warcraft universe (primarily in World of Warcraft), the plot revolves around two competing factions, the Horde and the Alliance, which are in constant conflict with eachother. From time to time, outside participants disturb this usual back and forth, e.g. when Arthas defected from the Alliance and became the Lich King, which both factions tried to see an end to (repeated again when Sylvanas Windrunner leaves the Horde and joins the Jailer in Shadowlands by shattering the Lich Kings mask). Some of this strife can be captured by creating a network where the characters have assigned a faction attribute, where neutral characters mainly are bosses in the game, or characters that aid both the Horde and Alliance in their fight against a common enemy.
+            </p>
             <div class="container">
-              bla bbla bal bla some intro to Warcraft
               <div class="row multi-columns-row">
                 <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="gallery-item">
@@ -198,7 +199,7 @@
               <button id="corr" class="btn btn-g btn-round">Degree Correlation</button>
             </p>
             <p style='padding-top: 20px;'>
-              Talk about degree stats blablabla.
+              In order to differentiate between the connectedness within the different communities of Alliance vs. Horde vs. Neutral or Male vs. Female characters, we created subgraphs for each of these and calculated some basic degree stats, that is min, max, mean, median and mode for the in-, out- and total-degree of these subgraphs as displayed in the table below. One thing to note from this is that e.g. the Horde characters are more disconnected from eachother than the Alliance and Neutral characters (since the mean and median is lower for the horde characters). Looking at the male vs. female characters, we see that the female characters seem to talk much less to each other than the male characters do! (this is not very typical. haaHa :)) This could have something to do with the fact that there are far fewer female than male characters in the network.
             </p>
             <div class="center table2">
               <p class='small-header center-text'>Degree Stats</p>
@@ -314,6 +315,44 @@
                   </tr>
                 </tbody>
               </table>
+              <table id="tabneutral_table" style="display:none" class="styled-table neutral">
+                <thead>
+                  <tr>
+                    <th>Neutral</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>mean</th>
+                    <th>median</th>
+                    <th>mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>In-degree</th>
+                    <td>0</td>
+                    <td>47</td>
+                    <td>8.53</td>
+                    <td>6.0</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>Out-degree</th>
+                    <td>0</td>
+                    <td>41</td>
+                    <td>8.53</td>
+                    <td>7.0</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th>Total-degree</th>
+                    <td>0</td>
+                    <td>88</td>
+                    <td>17.05</td>
+                    <td>13.0</td>
+                    <td>6</td>
+                  </tr>
+                </tbody>
+              </table>
               <table id="tabFemale_table" style="display:none" class="styled-table female">
                 <thead>
                   <tr>
@@ -394,12 +433,13 @@
                 <button id="tabentire" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Full</button>
                 <button id="taballiance" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Alliance</button>
                 <button id="tabhorde" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Horde</button>
+                <button id="tabneutral" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Neutral</button>
                 <button id="tabMale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Male</button>
                 <button id="tabFemale" onclick="tableToggle2(this.id)" class="btn btn-g btn-round">Female</button>
               </p>
             </div>
             <p style='padding-top: 20px;'>
-              Talk about centrality measures blablabla.
+              We can dive even further into comparing the connectedness of characters, by inspecting the different centrality measures over different subgraph partitions of the network, as displayed in the table below. Comparing the centrality measures for the different factions it is clear that the Horde characters and the Alliance characters have a much higher centrality measure in their subnetworks than the characters without faction do.
             </p>
             <div class="center table1">
               <p class='small-header center-text'>Centrality Measures</p>
