@@ -4,4 +4,4 @@ Analysis of the [Major characters in Warcraft](https://wowpedia.fandom.com/wiki/
 
 The end products are an initial [YouTube Video for Part A](https://www.youtube.com/watch?v=JJx5f5nSYfs), and the final [Website for Part B](https://youngpenguin.github.io/WOW/).
 
-Ditailed explanation and calculation can be found [here:](https://github.com/simonamtoft/warcraft-major-character-analysis)
+Ditailed explanation and calculation can be found [here!](https://github.com/simonamtoft/warcraft-major-character-analysis)
