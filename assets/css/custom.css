@@ -220,5 +220,11 @@ table {
     .noCenter{
       text-align: center;
     }
+
+  }
+  @media only screen and (max-width: 990px) {
+    .hide-mobile{
+      display: none!important;
+    }
   }
   
