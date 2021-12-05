@@ -268,8 +268,8 @@ select{
 
   .tooltip-toggle::before {
     position: absolute;
-    top: -80px;
-    left: -80px;
+    top: -50px;
+    left: -310px;
     background-color: #474747;
     border-radius: 5px;
     color: #fff;
