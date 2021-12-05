@@ -63,9 +63,9 @@
                 <li><a class="nav-link" onclick="customScroll('WC_section', -50)">
                   Word Clouds
                 </a></li>
-                <li><a class="nav-link" onclick="customScroll('Moreplots', -50)">
+                <!-- <li><a class="nav-link" onclick="customScroll('Moreplots', -50)">
                   More Network Analysis
-                </a></li>
+                </a></li> -->
                 <li><a class="nav-link" onclick="customScroll('CommentsTs', -50)">
                   Sentiment Analysis
                 </a></li>
@@ -161,9 +161,6 @@
 
               </div>
             </div>
-
-
-
             <p>
               In order to do so, a network is created, where nodes are each of the major characters, and edges between
               them arise when one characters wowpedia page links to anothers wowpedia page. This resulted in a network
@@ -171,11 +168,22 @@
             </p>
             <p class='small-header'>Network Visualization</p>
             <div class="bk-root" id="de5d91d7-79ee-4498-8f2b-a93e7d0b2f55" data-root-id="2968"></div>
-            <p>
+            <p style='padding-top: 25px;'>
               The nodes are colored according to their faction (red for Horde, blue for Alliance and gray for others,
               such as bosses in the game). Additionally, edges are colored according to the relationships of the two
               nodes, where gray links from any node to a neutral node, blue is between two alliance nodes, red is
               between two horde nodes and green is between a horde and alliance node. (Interactive plot, reset button in the top right corner of the plot in case you get lost)
+            </p>
+            <p>
+              To get a quick overview of the different attributes in the network an attribute distribution is created for each of the four attributes in the graph. From this attribute plot we see that genders, faction and status is nicely divided into a few groupings, however the race distribution is populated with a lot of different races with a few occurences apart from the main character races such as Human, Orc and Blood Elf.
+            </p>
+            <p class='small-header'>Attribute Distribution</p>
+            <canvas id="canvas"></canvas>
+            <p style='margin-top: 10px;'>
+              <button id="gender" class="btn btn-g btn-round">Gender</button>
+              <button id="fraction" class="btn btn-g btn-round">Faction</button>
+              <button id="status" class="btn btn-g btn-round">Status</button>
+              <button id="race" class="btn btn-g btn-round">Race</button>
             </p>
           </div>
         </div>
@@ -631,19 +639,16 @@
           </div>
         </div>
       </section>
+<!-- 
       <section id="Moreplots">
         <div class="container">
           <h1 class="center-text">More Network Analysis</h1>
-          <canvas id="canvas"></canvas>
-          <p style='margin-top: 10px;'>
-            <button id="gender" class="btn btn-g btn-round">Gender</button>
-            <button id="fraction" class="btn btn-g btn-round">Faction</button>
-            <button id="status" class="btn btn-g btn-round">Status</button>
-            <button id="race" class="btn btn-g btn-round">Race</button>
-          </p>
+
+          
         </div>
       </section>
-      <br><br>
+      <br><br> -->
+
       <section id="CommentsTs">
         <div class="center-text">
           <h1 class="center-text">Sentiment Analysis</h1>
