@@ -185,7 +185,19 @@ table {
   margin-top: 10px !important;
 }
 
-
+select{
+  padding: 7px 40px 7px 12px;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+    color: #5A667F;
+  
+}
 .network-visual {
   margin-left: 5vw;
   margin-right: 5vw;
@@ -226,6 +238,89 @@ table {
   margin: 0px;
   padding: 0px;
 }
+
+
+
+
+
+
+
+
+.label {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.label-text {
+  margin-left: 0.5em;
+}
+
+
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+}
+.tooltip-toggle svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  .tooltip-toggle::before {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    background-color: #474747;
+    border-radius: 5px;
+    color: #fff;
+    content: attr(aria-label);
+    padding: 1rem;
+    text-transform: none;
+    transition: all 0.5s ease;
+  }
+
+
+  .tooltip-toggle::after {
+    position: absolute;
+    top: -12px;
+    left: 9px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2B222A;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+  }
+  
+ 
+  .tooltip-toggle::before,
+  .tooltip-toggle::after {
+    color: #efefef;
+    font-family: monospace;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+  }
+  
+
+  .tooltip-toggle:focus::before,
+  .tooltip-toggle:focus::after,
+  .tooltip-toggle:hover::before,
+  .tooltip-toggle:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
+  }
+
+
+
+
+
+
+
+
   @media only screen and (max-width: 760px) {
     .noCenter{
       text-align: center;
