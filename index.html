@@ -447,7 +447,8 @@
               </p>
             </div>
             <p style='padding-top: 20px;'>
-              We can dive even further into comparing the connectedness of characters, by inspecting the different centrality measures over different subgraph partitions of the network, as displayed in the table below. Comparing the centrality measures for the different factions it is clear that the Horde characters and the Alliance characters have a much higher centrality measure in their subnetworks than the characters without faction do.
+              We can dive even further into comparing the connectedness of characters, by inspecting the different centrality measures over different subgraph partitions of the network, as displayed in the table below. 
+              Comparing the centrality measures for the different factions it is clear that the Horde characters and the Alliance characters have a much higher centrality measure in their subnetworks than the characters without faction do.
             </p>
             <div class="center table1">
               <p class='small-header center-text'>Centrality Measures</p>
@@ -539,6 +540,10 @@
                 <button id="tabstatus" onclick="tableToggle1(this.id)" class="btn btn-g btn-round">Status</button>
               </p>
             </div>
+            <p style='padding-top: 20px;'>
+              In addition to partitioning by node attributes, it is possible to use graph partitioning algorithms. One of these algorithms is the <a href='https://github.com/taynaud/python-louvain'>Louvain algorithm implemented in Python</a>, which when used on the Major Warcraft Character Network splits the network into the following seven communities: 
+
+            </p>
           </div>
         </div>
       </section>
@@ -546,10 +551,9 @@
         <div class="container">
           <h1 class="center-text">Word Clouds</h1>
           <p>
-            A way of getting the words that differentiate characters or groups of characters from each other is by
-            creating wordclouds from TF-IDF scores.
-            This has been done for different groupings of the Warcraft characters, which can be investigated using the
-            dropdown menus below. You can see which words describes your favorite group of characters, whether it be
+            A way of getting the words that differentiate characters or groups of characters from each other is by creating wordclouds from TF-IDF scores. 
+            This has been done for different groupings of the Warcraft characters, which can be investigated using the dropdown menus below. 
+            You can see which words describes your favorite group of characters, whether it be 
             Horde or Alliance, and even which words other players use to describe said characters!
           </p>
           <div class="center-text">
