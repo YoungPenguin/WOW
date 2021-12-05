@@ -21,6 +21,10 @@ main{
   overflow: hidden;
 }
 
+figcaption{
+  font-weight: bold;
+}
+
 section.module-medium{
   padding-top: 0rem !important;
 }
