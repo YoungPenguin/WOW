@@ -7,30 +7,50 @@ var out_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
     17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 33, 34, 35,
     36, 38, 39, 40, 41, 44, 46, 47, 48, 53, 55, 63, 66, 72, 84]
 
+var out_deg = [
+    2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
+    3, 7, 6, 3, 3, 5, 8, 4, 5, 1, 1, 1, 4, 3, 2, 1, 1,
+    3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1
+]
+var in_deg = [
+    3, 12, 14, 14, 13, 17, 18, 12, 16, 6, 13, 8, 5, 7, 9, 5, 9,
+    5, 8, 3, 4, 3, 3, 2, 1, 5, 4, 3, 2, 2, 2, 2, 2, 2,
+    1, 1, 3, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1
+]
+var rnd_out_deg = [ null,  null,  null,  null,  null,  null,  null,  null, 1,  7, 10, 19, 20, 25, 26, 31, 26, 29, 16, 15, 13, 12,  6,  3, null, 1, 1,null, null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+var rnd_in_deg = [  null,   null,   null,   null,   null,   null,   null,  2,  4, 12,  9, 19, 17, 25, 26, 26, 25, 28, 19, 12, 15,  7,  2,  8,
+    2,  null, null,  2,  null,  1,  null,  null,  null,  null,  null,  null,  null,  null,  null,
+    null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,  null,
+    null,  null, null]
+
 lineChart = new Chart(document.getElementById("InOutDeg"), {
     type: 'line',
     data: {
         labels: out_labels,
         datasets: [{
-            data: [
-                2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
-                3, 7, 6, 3, 3, 5, 8, 4, 5, 1, 1, 1, 4, 3, 2, 1, 1,
-                3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1
-            ],
+            label:"Network",
+            data: out_deg,
             borderWidth: 1,
             pointBackgroundColor: singleChartColor[0],
             showLine: true,
             backgroundColor: singleChartColor[1],
             borderColor: singleChartColor[0],  
+        },{
+            label:"Random",
+            data: rnd_out_deg,
+            borderWidth: 1,
+            pointBackgroundColor: singleChartColor_2[0],
+            showLine: true,
+            backgroundColor: singleChartColor_2[1],
+            borderColor: singleChartColor_2[0],  
         }]
     },
     options: {
         title: {
             display: true,
             text: 'Out-degree Distribution'
-        },
-        legend: {
-            display: false
         },
         tooltips: {
             callbacks: {
@@ -44,10 +64,11 @@ lineChart = new Chart(document.getElementById("InOutDeg"), {
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: 'Degree'
+                labelString: 'Out-degree'
               }
             }],
             yAxes: [{
+              type: "logarithmic",
               display: true,
               scaleLabel: {
                 display: true,
@@ -65,24 +86,28 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
         data: {
             labels: out_labels,
             datasets: [{
-                data: [
-                    2, 4, 5, 12, 10, 16, 20, 17, 9, 12, 12, 10, 15, 11, 10, 5, 9,
-                    3, 7, 6, 3, 3, 5, 8, 4, 5, 1, 1, 1, 4, 3, 2, 1, 1,
-                    3, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1],
+                label:"Network",
+                data: out_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
                 showLine: true,
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
-            }]
+            },{
+                label:"Random",
+                data: rnd_out_deg,
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor_2[0],
+                showLine: true,
+                backgroundColor: singleChartColor_2[1],
+                borderColor: singleChartColor_2[0],  
+            }
+        ]
         },
         options: {
             title: {
                 display: true,
                 text: 'Out-degree Distribution'
-            },
-            legend: {
-                display: false
             },
             tooltips: {
                 callbacks: {
@@ -96,10 +121,11 @@ document.getElementById("Out-Degree").addEventListener("click", function () {
                   display: true,
                   scaleLabel: {
                     display: true,
-                    labelString: 'Degree'
+                    labelString: 'Out-degree'
                   }
                 }],
                 yAxes: [{
+                  type: "logarithmic",
                   display: true,
                   scaleLabel: {
                     display: true,
@@ -119,25 +145,27 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         data: {
             labels: in_labels,
             datasets: [{
-                data: [
-                    3, 12, 14, 14, 13, 17, 18, 12, 16, 6, 13, 8, 5, 7, 9, 5, 9,
-                    5, 8, 3, 4, 3, 3, 2, 1, 5, 4, 3, 2, 2, 2, 2, 2, 2,
-                    1, 1, 3, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                    1, 1, 1, 1],
+                label:"Network",
+                data: in_deg,
                 borderWidth: 1,
                 pointBackgroundColor: singleChartColor[0],
                 showLine: true,
                 backgroundColor: singleChartColor[1],
                 borderColor: singleChartColor[0],  
+            },{
+                label:"Random",
+                data: rnd_in_deg,
+                borderWidth: 1,
+                pointBackgroundColor: singleChartColor_2[0],
+                showLine: true,
+                backgroundColor: singleChartColor_2[1],
+                borderColor: singleChartColor_2[0],  
             }]
         },
         options: {
             title: {
                 display: true,
                 text: 'In-degree Distribution'
-            },
-            legend: {
-                display: false
             },
             tooltips: {
                 callbacks: {
@@ -151,10 +179,11 @@ document.getElementById("In-Degree").addEventListener("click", function () {
                   display: true,
                   scaleLabel: {
                     display: true,
-                    labelString: 'Degree'
+                    labelString: 'In-degree'
                   }
                 }],
                 yAxes: [{
+                    type: "logarithmic",
                   display: true,
                   scaleLabel: {
                     display: true,
@@ -165,6 +194,97 @@ document.getElementById("In-Degree").addEventListener("click", function () {
         }
     });
 });
+
+var names = [
+    "A'dal",
+    "Alexstrasza",
+    "Illidan Stormrage",
+    "Kael'thas Sunstrider",
+    "Khadgar",
+    "Lady Liadrin",
+    "Lich King",
+    "M'uru",
+    "Maiev Shadowsong",
+    "Med'an",
+    "Remulos",
+    "Tirion Fordring",
+    "Velen",
+    "Aedelas Blackmoore",
+    "Arthas Menethil",
+    "Danath Trollbane",
+    "Taretha Foxton",
+    "Terenas Menethil II",
+    "Thrall",
+    "Aegwynn",
+    "Blackhand",
+    "Cho'gall",
+    "Jaina Proudmoore",
+    "Llane Wrynn I",
+    "Medivh",
+    "Meryl Felstorm",
+    "Nielas Aran",
+    "Sargeras",
+    "Valeera Sanguinar",
+    "Varian Wrynn",
+    "Aessina",
+    "Brann Bronzebeard",
+    "Elune", "Malorne", "Ysera",
+    "Aethas Sunreaver", "Anasterian Sunstrider",
+    "Garrosh Hellscream", "Grand Magister Rommath",
+    "Halduron Brightwing", "Kalecgos", "Lor'themar Theron",
+    "Malygos", "Rhonin", "Sylvanas Windrunner", "Taran Zhu",
+    "Vereesa Windrunner", "Vol'jin", "Agamaggan",
+    "Archimonde", "Cenarius", "Malfurion Stormrage",
+    "Mannoroth", "Rexxar", "Agatha", "Annhylde the Caller",
+    "Aggramar", "Eonar", "Magni Bronzebeard", "Tyr", "Aiden Perenolde",
+    "Orgrim Doomhammer", "Uther the Lightbringer", "Akama", "Kil'jaeden",
+    "Magtheridon", "Ner'zhul", "Al'Akir", "Cairne Bloodhoof", "Deathwing",
+    "Hodir", "N'Zoth", "Ra", "Ragnaros", "Thorim", "Thunderaan",
+    "Alexandros Mograine", "Balnazzar", "Baron Rivendare",
+    "Darion Mograine", "Draka", 
+    "Kel'Thuzad", 
+    "Muradin Bronzebeard", 
+    "Queen Azshara", "Renault Mograine", 
+    "Arygos", "Bolvar Fordragon", "Broll Bearmantle", 
+    "Chronormu", "Ebyssian", "Eranikus", "Fandral Staghelm", "Freya", 
+    "Galakrond", "Korialstrasz", "Loken", "Nekros Skullcrusher", "Nozdormu", 
+    "Shandris Feathermoon", "Tyranastrasz", "Tyrande Whisperwind", "Xavius", 
+    "Algalon the Observer", "Aman'Thul", "Odyn", "Yogg-Saron", 
+    "Alleria Windrunner", "Anduin Lothar", "Anduin Wrynn", "Arator the Redeemer", 
+    "Dar'Khan Drathir", "Galadin", "Gelbin Mekkatorque", "Giramar", 
+    "Kurdran Wildhammer", "L'ura", "Magister Umbric", "Nathanos Blightcaller", 
+    "Turalyon", "Varok Saurfang", "Xe'ra", "Zendarin Windrunner", "Zul'jin", 
+    "Alonsus Faol", "Archbishop Benedictus", "Genn Greymane", "Moira Thaurissan", 
+    "Lei Shen", "Norgannon", "Wrathion", "Y'Shaarj", "Anachronos", "Eitrigg", 
+    "Soridormi", "Dath'Remar Sunstrider", "Daelin Proudmoore", "Garona Halforcen", 
+    "Hakkar the Soulflayer", "Kilrogg Deadeye", "Nefarian", "Baine Bloodhoof", 
+    "Chi-Ji", "Dagran Thaurissan II", "Falstad Wildhammer", "Helya", "Ji Firepaw", 
+    "Landan Wrynn", "Liam Greymane", "Lorewalker Cho", "Magatha Grimtotem", 
+    "Mayla Highmountain", "Onyxia", "Sunwalker Dezco", "Talanji", "Xuen", "Zul", 
+    "Antonidas", "Teron Gorefiend", "Tichondrius", "Anub'arak", "Sapphiron", 
+    "Anveena Teague", "Jorad Mace", "Kairozdormu", "Trag Highmountain", "Tyrygosa", 
+    "Anzu", "Terokk", "Kirygosa", "Azgalor", "Gul'dan", "Hakkar the Houndmaster", 
+    "Jarod Shadowsong", "Yrel", "Dranosh Saurfang", "Falric", "Mal'Ganis", 
+    "Marwyn", "Thassarian", "Thoras Trollbane", "Varimathras", "C'Thun", 
+    "Aviana", "Goldrinn", "Aysa Cloudsinger", "Li Li Stormstout", 
+    "Hamuul Runetotem", "Huln Highmountain", "Jale Rivermane", "Lasan Skyhorn", 
+    "Rokhan", "Baron Revilgaz", "Dal'rend Blackhand", "Durotan", "Garad", 
+    "Grand Apothecary Putress", "Rehgar Earthfury", "Broxigar", "Varo'then", 
+    "Chen Stormstout", "Celebras", "Zaetar", "Liu Lang", "Yu'lon", 
+    "Emperor Shaohao", "Niuzao", "K'ure", "Dagran Thaurissan", 
+    "Galen Trollbane", "Dargrul", "Ulan Highmountain", "Koltira Deathweaver", 
+    "Darius Crowley", "Lorna Crowley", "Khaz'goroth", "Sabellian", "Sintharia",
+    "Zuluhed the Whacked", "Dentarg", "Kargath Bladefist", "Fenris Wolfbrother", 
+    "Drek'Thar", "Muln Earthfury", "Greatmother Geyah", "Master Gadrin", 
+    "Navarrogg", "Therazane", "Torok Bloodtotem", "Elisande", "Neptulon", 
+    "Gruul the Dragonkiller", "Tagar Spinebreaker", "Ursoc", "Ursol", "Leoroxx", 
+    "Millhouse Manastorm", "Vindicator Maraad", "Zalazane", "Golganneth", 
+    "Master Apothecary Faranell", "Grand Empress Shek'zeer", "Tortolla", 
+    "Kur'talos Ravencrest", "Lilian Voss", "K'ara", "Othmar Garithos", "Kang", 
+    "King Ymiron", "Silgryn", "Thargas Anvilmar", "Mimiron", "Smolderon", 
+    "Rastakhan", "Sen'jin", "Mogor", "Mug'thol", "Nazgrel", "Vilnak'dor", 
+    "Silas Darkmoon", "Talon King Ikiss", "The Monkey King"
+]
 
 var data1 = [{
     x: 12,
@@ -1218,6 +1338,7 @@ document.getElementById("corr").addEventListener("click", function () {
     lineChart = new Chart(document.getElementById("InOutDeg"), {
         type: 'scatter',
         data: {
+            labels: names,
             datasets: [{
                 label: 'corr', // Name the series
                 data: data1, // Specify the data values array
@@ -1234,8 +1355,9 @@ document.getElementById("corr").addEventListener("click", function () {
             },
             tooltips: {
                 callbacks: {
-                    label: function (tooltipItem) {
-                        return tooltipItem.yLabel;
+                    label: function (tooltipItem, data) {
+                        var label = data.labels[tooltipItem.index];
+                        return label + ' (' + tooltipItem.xLabel + ', ' + tooltipItem.yLabel + ')';
                     }
                 }
             },            

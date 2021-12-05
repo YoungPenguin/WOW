@@ -50,7 +50,7 @@ function plotDist() {
         document.getElementById('distPlotElement'),
         [...commentsPlotData, ...wikiPlotData],
         {
-            title: 'Compare sentiment distributions',
+            title: 'Sentiment Distributions',
             xaxis: {
                 title: 'Wowhead comments ' + fixString(params.metric)
             },
@@ -60,9 +60,9 @@ function plotDist() {
             xaxis2: {
                 title: 'Wiki quotes ' + fixString(params.metric)
             },
-            yaxis2: {
-                title: 'Density'
-            },
+            // yaxis2: {
+            //     title: 'Density'
+            // },
             grid: { rows: 1, columns: 2, pattern: 'independent' }
         }, {
         responsive: true
