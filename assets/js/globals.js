@@ -28,11 +28,11 @@ const labelToRGB = {
     'Female': ['rgb(212, 74, 204)', 'rgba(212, 74, 204, 0.2)'],
     "Khadgar, Illidan, Lor'themar": ['#62704d', '--'],
     "Deathwing, Sargeras, Yogg-Saron": ['#53868b', '--'],
-    "Sylvanas, Lich King, Varian Wrynn": ['#8e635e', '--'],
+    "Sylvanas, Lich King, Varian": ['#8e635e', '--'],
     "Tyrande, Malfurion, Alexstrasza": ['#f5a791', '--'],
     "Thrall, Ner'zhul, Orgrim": ['#8c7549', '--'],
     "Anzu, Terokk, Talon King Ikiss": ['#b3c598', '--'],
-    "Jaina Proudmoore, Anduin Wrynn, Garrosh": ['#432f20', '--']
+    "Jaina, Anduin, Garrosh": ['#432f20', '--']
 }
 
 
