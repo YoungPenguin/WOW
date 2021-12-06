@@ -281,7 +281,8 @@
               <button id="corr" class="btn btn-g btn-round">Degree Correlation</button>
             </p>
             <p style='padding-top: 20px;'>
-              In order to differentiate between the connectedness within the different communities of Alliance vs. Horde vs. Neutral or Male vs. Female characters, we created subgraphs for each of these and calculated some basic degree stats, that is min, max, mean, median and mode for the in-, out- and total-degree of these subgraphs as displayed in the table below. One thing to note from this is that e.g. the Horde characters are more disconnected from eachother than the Alliance and Neutral characters (since the mean and median is lower for the horde characters). Looking at the male vs. female characters, we see that the female characters seem to talk much less to each other than the male characters do! (this is not very typical. haaHa :)) This could have something to do with the fact that there are far fewer female than male characters in the network.
+              In order to differentiate between the connectedness within the different communities of Alliance vs. Horde vs. Neutral or Male vs. Female characters, we created subgraphs for each of these and calculated some basic degree stats, that is min, max, mean, median and mode for the in-, out- and total-degree of these subgraphs as displayed in the table below. One thing to note from this is that e.g. the Horde characters are more disconnected from eachother than the Alliance and Neutral characters (since the mean and median is lower for the horde characters). Looking at the male vs. female characters, we see that the female characters seem to talk much less to each other than the male characters do! This could have something to do with the fact that there are far fewer female than male characters in the network.
+              <!-- - meaning that they are less important in the universe (you should have thought about this earlier Blizzard...) -->
             </p>
             <div class="center table2">
               <p class='small-header center-text'>Degree Stats</p>
@@ -772,7 +773,14 @@
           <div class="center-text">
             <h1>Sentiment Analysis</h1>
             <p>
-              We would now like to produce a unidimensional sentiment score for wowhead comments and character quotes from wowpedia. Sentiment scores are computed both user <a href="https://github.com/cjhutto/vaderSentiment" target='_blank'>VADER scoring</a> and the <a href="https://github.com/flairNLP/flair" target='_blank'>BERT analyser from flairNLP</a>
+              We would now like to produce a unidimensional sentiment score for wowhead comments and character quotes from wowpedia. Sentiment scores are computed with both <a href="https://github.com/cjhutto/vaderSentiment" target='_blank'>VADER scoring</a> and the <a href="https://github.com/flairNLP/flair" target='_blank'>BERT analyser from flairNLP</a>, where we reduce the sentiment scores for the individual text entities (Wowhead comments or Wikipage quotes) to a single character-level score by taking the mean of the scores for all comments/quotes that belong to the respective characters.
+            </p>
+            <p>
+              LUCAS?
+              <!-- Investigating the different sentiment distributions shows that most VADER sentiment distributions have around zero-mean, but can be scewed a bit towards either negative or positive sentiment.
+              
+              
+              One of such distributions is for the community containing Khadgar, Illidan and Lor'themar, where the wowhead comments are scewed towards a negative sentiment, while the character quotes from wowpedia seem to give a positive sentiment score. -->
             </p>
             <div id="distPlotElement" class='sentiment-plot'></div>
             <select id="dist_metric" onChange="plotDist()">
@@ -798,7 +806,10 @@
         <div class="container">
           <div class="center-text" style="margin-bottom: 100px; margin-top: 50px">
             <p>
-              Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah lorem ipsum
+              Extracting the wowhead comments also gave some metadata, one of which was a timestamp of when the comment was created. From this, we've done a time-series analysis of the wowhead user comments sentiment scores, trying to reveal any potential trends for characters over time.
+            </p>
+            <p>
+              LUCAS?
             </p>
 
             <div 
