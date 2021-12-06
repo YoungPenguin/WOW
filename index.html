@@ -50,23 +50,23 @@
         <div class="collapse navbar-collapse" id="custom-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-item active">
-              <a class="nav-link" onclick="customScroll('demos', -10)">Intro<span class="sr-only">(current)</span></a>
+              <a class="nav-link" onclick="customScroll('demos', -47)">Intro<span class="sr-only">(current)</span></a>
             </li>
             <li class="dropdown">
               <a class="dropdown-toggle nav-link" href="#Analysis" data-toggle="dropdown">
                 ANALYSIS
               </a>
               <ul class="dropdown-menu leftauto">
-                <li><a class="nav-link" onclick="customScroll('connections', -50)">
+                <li><a class="nav-link" onclick="customScroll('connections', -60)">
                   Character Connections
                 </a></li>
-                <li><a class="nav-link" onclick="customScroll('WC_section', -50)">
+                <li><a class="nav-link" onclick="customScroll('WC_section', -60)">
                   WordClouds
                 </a></li>
                 <!-- <li><a class="nav-link" onclick="customScroll('Moreplots', -50)">
                   More Network Analysis
                 </a></li> -->
-                <li><a class="nav-link" onclick="customScroll('CommentsTs', -50)">
+                <li><a class="nav-link" onclick="customScroll('DistCommentsAndWiki', -60)">
                   Sentiment Analysis
                 </a></li>
               </ul>
@@ -617,7 +617,7 @@
               </p>
             </div>
             <p style='padding-top: 20px;'>
-              In addition to partitioning by node attributes, it is possible to use graph partitioning algorithms. One of these algorithms is the <a href='https://github.com/taynaud/python-louvain'>Louvain algorithm implemented in Python</a>, which when used on the Major Warcraft Character Network splits the network seven communities, where the top three characters of each community according to their node degree is: 
+              In addition to partitioning by node attributes, it is possible to use graph partitioning algorithms. One of these algorithms is the <a href='https://github.com/taynaud/python-louvain' target='_blank'>Louvain algorithm implemented in Python</a>, which when used on the Major Warcraft Character Network splits the network seven communities, where the top three characters of each community according to their node degree is: 
             </p>
           <div style="max-width: 600px; margin: auto  auto 6rem auto;">
             <table class="styled-table">
@@ -765,74 +765,85 @@
           </div>
         </div>
       </section>
-      <section id="CommentsTs">
-        <div class="center-text">
-          <h1 class="center-text">Sentiment Analysis</h1>
-          <p>
-            Blah blah something explaining comments and timeseries and blah blah lorem ipsum
-          </p>
 
-          <div 
-            class='sentiment-plot'
-            id="tsPlotElement"
-          ></div>
 
-          <select id="ts_metric" onChange="plotTs()">
-            <option value="bert_sentiment">Bert sentiment</option>
-            <option value="vader_sentiment">Vader sentiment</option>
-            <option value="rating">Comment rating</option>
-          </select>
-          <select id="ts_breakdown" onChange="plotTs()">
-            <option value="faction" selected>Faction</option>
-            <option value="gender">Gender</option>
-            <option value="status">Status</option>
-            <option value="community">Community</option>
-          </select>
-          <select id="ts_resample" onChange="plotTs()">
-            <option value="M">Month</option>
-            <option value="Q">Quarter</option>
-            <option value="Y" selected>Year</option>
-          </select>
-          <div class="label">
-            <span class="tooltip-toggle" aria-label="Pick time axis to average sentiment over" tabindex="0">
-              <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><g fill="#111" fill-rule="evenodd"><path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/><path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/></g></svg>
-            </span>
-          </div>
-          <select id="ts_replies" onChange="plotTs()">
-            <option value="include">Include</option>
-            <option value="ignore">Ignore</option>
-          </select>
-          <div class="label">
-            <span class="tooltip-toggle" aria-label="Include/ignore subcomments to the original wowhead comments." tabindex="0">
-              <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><g fill="#111" fill-rule="evenodd"><path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/><path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/></g></svg>
-            </span>
-          </div>
-          <script src="assets/data/commentTsData.js"></script>
-          <script src="assets/js/tsComments.js"></script>   
-        </div>  
-      </section>
       <section id="DistCommentsAndWiki">
-        <div class="center-text" style="margin-bottom: 100px; margin-top: 50px">
-          <p>
-            Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah lorem ipsum
-          </p>
-          <div id="distPlotElement" class='sentiment-plot'></div>
-          <select id="dist_metric" onChange="plotDist()">
-            <option value="bert_sentiment">Bert sentiment</option>
-            <option value="vader_sentiment">Vader sentiment</option>
-          </select>
-          <select id="dist_breakdown" onChange="plotDist()">
-            <option value="faction" selected>Faction</option>
-            <option value="gender">Gender</option>
-            <option value="status">Status</option>
-            <option value="community">Community</option>
-          </select>
+        <div class="container">
+          <div class="center-text">
+            <h1>Sentiment Analysis</h1>
+            <p>
+              We would now like to produce a unidimensional sentiment score for wowhead comments and character quotes from wowpedia. Sentiment scores are computed both user <a href="https://github.com/cjhutto/vaderSentiment" target='_blank'>VADER scoring</a> and the <a href="https://github.com/flairNLP/flair" target='_blank'>BERT analyser from flairNLP</a>
+            </p>
+            <div id="distPlotElement" class='sentiment-plot'></div>
+            <select id="dist_metric" onChange="plotDist()">
+              <option value="bert_sentiment">Bert sentiment</option>
+              <option value="vader_sentiment">Vader sentiment</option>
+            </select>
+            <select id="dist_breakdown" onChange="plotDist()">
+              <option value="faction" selected>Faction</option>
+              <option value="gender">Gender</option>
+              <option value="status">Status</option>
+              <option value="community">Community</option>
+            </select>
+          </div>
         </div>
 
         <script src="assets/data/commentDistData.js"></script>
         <script src="assets/data/wikiDistData.js"></script>
         <script src="assets/js/distCommentsAndWiki.js"></script>
       </section>
+
+
+      <section id="CommentsTs">
+        <div class="container">
+          <div class="center-text" style="margin-bottom: 100px; margin-top: 50px">
+            <p>
+              Blah blah something explaining distribution of sentiment for wiki quotes and wowhead comments blah blah lorem ipsum
+            </p>
+
+            <div 
+              class='sentiment-plot'
+              id="tsPlotElement"
+            ></div>
+
+            <select id="ts_metric" onChange="plotTs()">
+              <option value="bert_sentiment">Bert sentiment</option>
+              <option value="vader_sentiment">Vader sentiment</option>
+              <option value="rating">Comment rating</option>
+            </select>
+            <select id="ts_breakdown" onChange="plotTs()">
+              <option value="faction" selected>Faction</option>
+              <option value="gender">Gender</option>
+              <option value="status">Status</option>
+              <option value="community">Community</option>
+            </select>
+            <select id="ts_resample" onChange="plotTs()">
+              <option value="M">Month</option>
+              <option value="Q">Quarter</option>
+              <option value="Y" selected>Year</option>
+            </select>
+            <div class="label">
+              <span class="tooltip-toggle" aria-label="Pick time axis to average sentiment over" tabindex="0">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><g fill="#111" fill-rule="evenodd"><path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/><path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/></g></svg>
+              </span>
+            </div>
+            <select id="ts_replies" onChange="plotTs()">
+              <option value="include">Include</option>
+              <option value="ignore">Ignore</option>
+            </select>
+            <div class="label">
+              <span class="tooltip-toggle" aria-label="Include/ignore subcomments to the original wowhead comments." tabindex="0">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><g fill="#111" fill-rule="evenodd"><path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/><path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/></g></svg>
+              </span>
+            </div>
+            <script src="assets/data/commentTsData.js"></script>
+            <script src="assets/js/tsComments.js"></script>   
+          </div> 
+        </div>
+      </section>
+      
+
+
       <section class="module-extra-small bg-dark">
         <div class="container">
           <div class="row">
