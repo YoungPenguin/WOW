@@ -776,9 +776,10 @@
               We would now like to produce a unidimensional sentiment score for wowhead comments and character quotes from wowpedia. Sentiment scores are computed with both <a href="https://github.com/cjhutto/vaderSentiment" target='_blank'>VADER scoring</a> and the <a href="https://github.com/flairNLP/flair" target='_blank'>BERT analyser from flairNLP</a>, where we reduce the sentiment scores for the individual text entities (Wowhead comments or Wikipage quotes) to a single character-level score by taking the mean of the scores for all comments/quotes that belong to the respective characters.
             </p>
             <p>
-              LUCAS?
+              Doing this for all characters by first using solely Wowhead comment text data, and afterwards using only Wikipages quote text data, we can produce two histograms plots. To add perspective to the plots, we allow for a sentiment score distribution to be plotted for certain groupings of characters (e.g. grouped by Faction, or by Community), in order to portray any difference there may be between such groups. This can be explored in the interactive plots below.
               <!-- Investigating the different sentiment distributions shows that most VADER sentiment distributions have around zero-mean, but can be scewed a bit towards either negative or positive sentiment.
               
+
               
               One of such distributions is for the community containing Khadgar, Illidan and Lor'themar, where the wowhead comments are scewed towards a negative sentiment, while the character quotes from wowpedia seem to give a positive sentiment score. -->
             </p>
@@ -793,6 +794,13 @@
               <option value="status">Status</option>
               <option value="community">Community</option>
             </select>
+
+            <br/>
+            <br/>
+
+            <p>
+              Playing around with the different options and observing the plots reveals a few things about the sentiment scores. For instance, the mean of the BERT scores is smaller than 0 for Wowhead comments, and larger than 0 for Wiki quotes. It also shows that VADER sentiment values in general are a bit more centered around 0, with flatter tails. This is also explored in the explainer notebook.
+            </p>
           </div>
         </div>
 
@@ -806,10 +814,10 @@
         <div class="container">
           <div class="center-text" style="margin-bottom: 100px; margin-top: 50px">
             <p>
-              Extracting the wowhead comments also gave some metadata, one of which was a timestamp of when the comment was created. From this, we've done a time-series analysis of the wowhead user comments sentiment scores, trying to reveal any potential trends for characters over time.
+              Extracting the wowhead comments also gave some metadata. This includes a timestamp of when the comment was created. From this, we've done a time-series analysis of the wowhead user comments sentiment scores, trying to reveal any potential trends for sentiment values related to characters over time.
             </p>
             <p>
-              LUCAS?
+              Similarly to the sentiment value distribution plots, we provide to ability to separate characters by certain groupings (e.g. Faction or Community). The mean comment sentiment values are then calculated for the specified resampling option (e.g. reduced monthly, quarterly or yearly). 
             </p>
 
             <div 
@@ -848,7 +856,12 @@
               </span>
             </div>
             <script src="assets/data/commentTsData.js"></script>
-            <script src="assets/js/tsComments.js"></script>   
+            <script src="assets/js/tsComments.js"></script>
+
+            <br><br>
+            <p>
+              Playing around with the options and observing what the plot shows, some trends start to appear. For instance, sentiment values seem to be more volatile after about 2016 (to a more significant degee for certain groupings). However, the plot does not portray the amount of comments that are included in every date bin, which results in the plot omitting some important context. This is explored further in the explainer notebook.
+            </p>
           </div> 
         </div>
       </section>
