@@ -52,13 +52,13 @@ function plotDist() {
         {
             title: 'Sentiment Distributions',
             xaxis: {
-                title: 'Wowhead comments ' + fixString(params.metric)
+                title: 'Wowhead comments ' + fixString(params.metric) + ' per character'
             },
             yaxis: {
                 title: `Density`
             },
             xaxis2: {
-                title: 'Wiki quotes ' + fixString(params.metric)
+                title: 'Wiki quotes ' + fixString(params.metric) + ' per character'
             },
             // yaxis2: {
             //     title: 'Density'
