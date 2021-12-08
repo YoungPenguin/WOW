@@ -779,8 +779,6 @@
               Doing this for all characters by first using solely Wowhead comment text data, and afterwards using only Wikipages quote text data, we can produce two histograms plots. To add perspective to the plots, we allow for a sentiment score distribution to be plotted for certain groupings of characters (e.g. grouped by Faction, or by Community), in order to portray any difference there may be between such groups. This can be explored in the interactive plots below.
               <!-- Investigating the different sentiment distributions shows that most VADER sentiment distributions have around zero-mean, but can be scewed a bit towards either negative or positive sentiment.
               
-
-              
               One of such distributions is for the community containing Khadgar, Illidan and Lor'themar, where the wowhead comments are scewed towards a negative sentiment, while the character quotes from wowpedia seem to give a positive sentiment score. -->
             </p>
             <div id="distPlotElement" class='sentiment-plot'></div>
@@ -812,7 +810,7 @@
 
       <section id="CommentsTs">
         <div class="container">
-          <div class="center-text" style="margin-bottom: 100px; margin-top: 50px">
+          <div class="center-text" style="margin-bottom: 100px;">
             <p>
               Extracting the wowhead comments also gave some metadata. This includes a timestamp of when the comment was created. From this, we've done a time-series analysis of the wowhead user comments sentiment scores, trying to reveal any potential trends for sentiment values related to characters over time.
             </p>
