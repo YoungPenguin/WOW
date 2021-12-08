@@ -53,7 +53,7 @@
               <a class="nav-link" onclick="customScroll('demos', -47)">Intro<span class="sr-only">(current)</span></a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle nav-link" href="#Analysis" data-toggle="dropdown">
+              <a class="dropdown-toggle nav-link" onclick="customScroll('Analysis', -60)" data-toggle="dropdown">
                 ANALYSIS
               </a>
               <ul class="dropdown-menu leftauto">
@@ -71,8 +71,22 @@
                 </a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="customScroll('ElplainerNotebook', -100)">Data and Notebook</a>
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-link" onclick="customScroll('ElplainerNotebook', -100)" data-toggle="dropdown">
+                Data and Notebook
+              </a>
+              <ul class="dropdown-menu leftauto">
+                <li>
+                  <a class="nav-link" onclick="NewTab('https://github.com/simonamtoft/warcraft-major-character-analysis/')">Analysis repo</a>
+                </li>
+                <li>
+                  <a class="nav-link" onclick="NewTab('https://github.com/simonamtoft/warcraft-major-character-analysis/blob/main/Explainer.ipynb')">Explainer Notebook</a>
+                </li>
+                <li><a class="nav-link" onclick="NewTab('https://github.com/YoungPenguin/WOW/')">Website repo</a></li>
+                <li><a class="nav-link" onclick="Download('assets/data/all_major_character_warcraft_data.zip')">
+                  Download data
+                </a></li>
+              </ul>
             </li>
           </ul>
         </div>
