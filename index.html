@@ -166,15 +166,15 @@
                 wowpedia api
               </a>
               , where we will get information about each characters gender, faction, race and whether the character is alive in the lore of the game, while also extracting their in-game quotes from the quotes section on the page. Additionally, we will extract user comments
-              from the characters 
+              from the 
               <a 
                   style='color: rgb(149, 125, 173); font-weight: bolder;' 
                   href="https://www.wowhead.com"
                   target='_blank'
               >
                 wowhead
-              </a> 
-              threads using 
+              </a>
+              character pages using 
               <a
                 style='color: rgb(149, 125, 173); font-weight: bolder;' 
                 href="https://pypi.org/project/beautifulsoup4/"
@@ -182,10 +182,10 @@
               >
                 beautifulsoup
               </a>
-              , where the timestamp associated with each comment will also be used. The resulting raw and pre-processed json and txt files contains 1739 files (~50MB), which can be downloaded using the button above, including some pickled results etc.. Almost eveything on this website is in some way, shape, or form interactive, so please remember to play around. You can use the Navbar in the top to auto scroll to different sections on the page. 
+              , where the timestamp associated with each comment will also be used. The resulting raw and pre-processed json and txt files contains 1739 files (~50MB), which can be downloaded using the button above, including some pickled results etc.. Almost everything on this website is in some way, shape, or form interactive, so please remember to play around. You can use the Navbar in the top to auto scroll to different sections on the page. 
             </p>
             <p>
-              In the Warcraft universe (primarily in World of Warcraft), the plot revolves around two competing factions, the Horde and the Alliance, which are in constant conflict with eachother. From time to time, outside participants disturb this usual back and forth, e.g. when Arthas defected from the Alliance and became the Lich King, which both factions tried to see an end to (repeated again when Sylvanas Windrunner leaves the Horde and joins the Jailer in Shadowlands by shattering the Lich Kings mask). Some of this strife can be captured by creating a network where the characters have assigned a faction attribute, where neutral characters mainly are bosses in the game, or characters that aid both the Horde and Alliance in their fight against a common enemy.
+              In the Warcraft universe (primarily in World of Warcraft), the plot revolves around two competing factions, the Horde and the Alliance, which are in constant conflict with each other. From time to time, outside participants disturb this usual back and forth, e.g. when Arthas defected from the Alliance and became the Lich King, which both factions tried to see an end to (repeated again when Sylvanas Windrunner leaves the Horde and joins the Jailer in Shadowlands by shattering the Lich Kings mask). Some of this strife can be captured by creating a network where the characters have assigned a faction attribute, where neutral characters are mainly bosses in the game, or characters that aid both the Horde and Alliance in their fight against a common enemy.
             </p>
             <div class="container">
               <div class="row multi-columns-row">
@@ -229,7 +229,7 @@
               between two Horde nodes and green is between a Horde and an Alliance node. (Interactive plot, reset button in the top right corner of the plot in case you get lost)
             </p>
             <p>
-              We can see from the network that there are some character that are very well connected, taking a closer look we can see that, the most connected Alliance characters include the current and late kings of the Alliance capital "Stormwind" (Anduin and Varian Wrynn). For the Horde characters, we notice the biggest nodes in the network, Thrall, which has been the warchief of the Horde capital "Orgrimmar" and is probably one of the most known character in Warcraft. Finally, for the Neutral characters we see Sylvanas Windrunner as one of the most connected, she is one of the newest boss characters who previously was a part of the Horde.
+              We can see from the network that there are some characters that are very well connected, taking a closer look we can see that the most connected Alliance characters include the current and late kings of the Alliance capital "Stormwind" (Anduin and Varian Wrynn). For the Horde characters, we notice the biggest nodes in the network, Thrall, which has been the warchief of the Horde capital "Orgrimmar" and is probably one of the most known character in Warcraft. Finally, for the Neutral characters we see Sylvanas Windrunner as one of the most connected, she is one of the newest boss characters who previously was a part of the Horde.
 
             </p>
             <div class="center">
@@ -304,7 +304,7 @@
             </div>
 
             <p>
-              To get a quick overview of the different attributes in the network an attribute distribution is created for each of the four attributes in the graph. From this attribute plot we see that genders, faction and status is nicely divided into a few groupings, however the race distribution is populated with a lot of different races with a few occurences apart from the main character races such as human, orc and blood elf.
+              To get a quick overview of the different attributes in the network an attribute distribution is created for each of the four attributes in the graph. From this attribute plot we see that genders, faction and status is nicely divided into a few groupings, however the race distribution is populated with a lot of different races with a few occurrences apart from the main character races such as human, orc and blood elf.
             </p>
             <p class='small-header'>Attribute Distribution</p>
             <canvas id="canvas"></canvas>
@@ -327,7 +327,7 @@
               centrality measures.
             </p>
             <p>
-              Below plots of the out- and in-degree distributions of the Warcraft network is shown along with the degree distribution of a random erdos-renyi network, which have the same number of nodes as the Warcraft network and the probability of connection is calculated from the average out- and in-degree respectively. From this it seems like the Warcraft network is not entirely random! Additionally, a scatter plot of the In- vs. out-degree for each character in the network is shown. 
+              Below plots of the out- and in-degree distributions of the Warcraft network is shown along with the degree distribution of a random Erdős-Renyi network, which have the same number of nodes as the Warcraft network and the probability of connection is calculated from the average out- and in-degree respectively. From this it seems like the Warcraft network is not entirely random! Additionally, a scatter plot of the In- vs. out-degree for each character in the network is shown. 
             </p>
             <canvas id="InOutDeg"></canvas>
             <p style='margin-top: 10px'>
@@ -336,7 +336,7 @@
               <button id="corr" class="btn btn-g btn-round">Degree Correlation</button>
             </p>
             <p style='padding-top: 20px;'>
-              In order to differentiate between the connectedness within the different communities of Alliance vs. Horde vs. Neutral or Male vs. Female characters, we created subgraphs for each of these and calculated some basic degree stats, that is min, max, mean, median and mode for the in-, out- and total-degree of these subgraphs as displayed in the table below. One thing to note from this is that e.g. the Horde characters are more disconnected from eachother than the Alliance and Neutral characters (since the mean and median is lower for the Horde characters). Looking at the male vs. female characters, we see that the female characters seem to talk much less to each other than the male characters do! This could have something to do with the fact that there are far fewer female than male characters in the network (see attribute distribution plot).
+              In order to differentiate between the connectedness within the different communities of Alliance vs. Horde vs. Neutral or Male vs. Female characters, we created subgraphs for each of these and calculated some basic degree stats, that is min, max, mean, median and mode for the in-, out- and total-degree of these subgraphs as displayed in the table below. One thing to note from this is that e.g. the Horde characters are more disconnected from each other than the Alliance and Neutral characters (since the mean and median is lower for the Horde characters). Looking at the male vs. female characters, we see that the female characters seem to talk much less to each other than the male characters do! This could have something to do with the fact that there are far fewer female than male characters in the network (see attribute distribution plot).
               <!-- - meaning that they are less important in the universe (you should have thought about this earlier Blizzard...) -->
             </p>
             <div class="center table2">
@@ -729,9 +729,9 @@
             Horde or Alliance, and even which words other players use to describe said characters!
           </p>
           <p>
-            Some nice wordcloud comparisions can be seen between e.g. dead and alive from wowhead, where you can see that the words mainly comes from users trying to describe how to solo boss fights (words pet, kill, phase, killed etc.), these are still there for the deceased characters, but far less important.
+            Some nice wordcloud comparisons can be seen between e.g. dead and alive from wowhead, where you can see that the words mainly comes from users trying to describe how to solo boss fights (words pet, kill, phase, killed etc.), these are still there for the deceased characters, but far less important.
             When comparing the Alliance and Horde wordclouds from wowhead, one thing to notice is that most words are very different, with a few common words appearing across the two sources. For Alliance "naaru", "skybreaker" and "bloodmyst" is mentioned in both wordclouds. For Horde we don't really see any common words, however some new very fitting words like "clan" and "troll" appear.
-            Another interesting wordcloud is for community 6, where the wordclouds for wowhead and wowpedia both match nearly perfectly with eachother, and these words also describe characteristics of the underlying community, which is the "Arakkoa" race for which "Skettis" is their capital, "Ikiss" is a king, "Sethekk" is one of their factions.
+            Another interesting wordcloud is for community 6, where the wordclouds for wowhead and wowpedia both match nearly perfectly with each other, and these words also describe characteristics of the underlying community, which is the "Arakkoa" race for which "Skettis" is their capital, "Ikiss" is a king, "Sethekk" is one of their factions.
           </p>
           <p>
             What can you uncover when you compare the different wordclouds?
