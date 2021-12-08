@@ -799,7 +799,7 @@
             <br/>
 
             <p>
-              Playing around with the different options and observing the plots reveals a few things about the sentiment scores. For instance, the mean of the BERT scores is smaller than 0 for Wowhead comments, and larger than 0 for Wiki quotes. It also shows that VADER sentiment values in general are a bit more centered around 0, with flatter tails. This is also explored in the explainer notebook.
+              Playing around with the different options and observing the plots reveals a few things about the sentiment scores. For instance, the mean of the BERT scores is smaller than 0 for Wowhead comments, and larger than 0 for Wiki quotes. It also shows that VADER sentiment values in general are a bit more centered around 0, with flatter tails.
             </p>
           </div>
         </div>
@@ -829,6 +829,7 @@
               <option value="bert_sentiment">Bert sentiment</option>
               <option value="vader_sentiment">Vader sentiment</option>
               <option value="rating">Comment rating</option>
+              <option value="count">Comment counts</option>
             </select>
             <select id="ts_breakdown" onChange="plotTs()">
               <option value="faction" selected>Faction</option>
@@ -860,7 +861,7 @@
 
             <br><br>
             <p>
-              Playing around with the options and observing what the plot shows, some trends start to appear. For instance, sentiment values seem to be more volatile after about 2016 (to a more significant degee for certain groupings). However, the plot does not portray the amount of comments that are included in every date bin, which results in the plot omitting some important context. This is explored further in the explainer notebook.
+              Playing around with the options and observing what the plot shows, some trends start to appear. For instance, sentiment values seem to be more volatile after about 2016 (to a more significant degee for certain groupings). Switching the metric to show comment counts provides some extra context, as it reveals that not that many comments are made in this period. In fact, the amount of comments made in each period is unsurprisingly strongly correlated to the number of active players in those periods, if one were to look up this data.
             </p>
           </div> 
         </div>
