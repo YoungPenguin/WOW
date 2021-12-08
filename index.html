@@ -135,8 +135,7 @@
               >
                 Major characters in Warcraft
               </a>
-              . This will be done by accessing
-              their 
+              . This will be done by accessing the
               <a 
                 style='color: rgb(149, 125, 173); font-weight: bolder;' 
                 href="https://wowpedia.fandom.com/wiki/Wowpedia"
@@ -144,7 +143,7 @@
               >
                 wowpedia
               </a> 
-              pages using the 
+              page for each of the characters using the 
               <a 
                 style='color: rgb(149, 125, 173); font-weight: bolder;' 
                 href="https://wowpedia.fandom.com/wiki/World_of_Warcraft_API"
@@ -169,7 +168,7 @@
               >
                 beautifulsoup
               </a>
-              , where the timestamp associated with each comment will also be used. The resulting raw and pre-processed dataset contains 1739 files (~50MB), which can be downloaded using the button above, including some pickled results etc.. Almost eveything on this website is in some way, shape, or form interactive, so please remember to play around. You can use the Navbar in the top to auto scroll to different sections on the page. 
+              , where the timestamp associated with each comment will also be used. The resulting raw and pre-processed json and txt files contains 1739 files (~50MB), which can be downloaded using the button above, including some pickled results etc.. Almost eveything on this website is in some way, shape, or form interactive, so please remember to play around. You can use the Navbar in the top to auto scroll to different sections on the page. 
             </p>
             <p>
               In the Warcraft universe (primarily in World of Warcraft), the plot revolves around two competing factions, the Horde and the Alliance, which are in constant conflict with eachother. From time to time, outside participants disturb this usual back and forth, e.g. when Arthas defected from the Alliance and became the Lich King, which both factions tried to see an end to (repeated again when Sylvanas Windrunner leaves the Horde and joins the Jailer in Shadowlands by shattering the Lich Kings mask). Some of this strife can be captured by creating a network where the characters have assigned a faction attribute, where neutral characters mainly are bosses in the game, or characters that aid both the Horde and Alliance in their fight against a common enemy.
@@ -822,7 +821,7 @@
               We would now like to produce a unidimensional sentiment score for wowhead comments and character quotes from wowpedia. Sentiment scores are computed with both <a href="https://github.com/cjhutto/vaderSentiment" target='_blank'>VADER scoring</a> and the <a href="https://github.com/flairNLP/flair" target='_blank'>BERT analyser from flairNLP</a>, where we reduce the sentiment scores for the individual text entities (Wowhead comments or Wikipage quotes) to a single character-level score by taking the mean of the scores for all comments/quotes that belong to the respective characters.
             </p>
             <p>
-              Doing this for all characters by first using solely Wowhead comment text data, and afterwards using only Wikipages quote text data, we can produce two histograms plots. To add perspective to the plots, we allow for a sentiment score distribution to be plotted for certain groupings of characters (e.g. grouped by Faction, or by Community), in order to portray any difference there may be between such groups. This can be explored in the interactive plots below.
+              Doing this for all characters by first using solely Wowhead comment text data, and afterwards using only Wikipages quote text data, we can produce two histograms plots. To add perspective to the plots, we allow for a sentiment score distribution to be plotted for certain groupings of characters (e.g. grouped by faction, or by community), in order to portray any difference there may be between such groups. This can be explored in the interactive plots below.
               <!-- Investigating the different sentiment distributions shows that most VADER sentiment distributions have around zero-mean, but can be scewed a bit towards either negative or positive sentiment.
               
               One of such distributions is for the community containing Khadgar, Illidan and Lor'themar, where the wowhead comments are scewed towards a negative sentiment, while the character quotes from wowpedia seem to give a positive sentiment score. -->
